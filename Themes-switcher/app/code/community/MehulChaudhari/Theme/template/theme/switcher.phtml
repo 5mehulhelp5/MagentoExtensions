@@ -1,0 +1,30 @@
+<?php
+/**
+ * Created by JetBrains PhpStorm.
+ * User: pp
+ * Date: 3/24/11
+ * Time: 3:27 PM
+ */
+/** @var $this MehulChaudhari_Theme_Block_Switcher */
+
+//echo  '<!-- ' . $this->helper->testGetCurrentUrl() . ' -->';
+?>
+<?php if (count($this->getThemes()) > 1): ?>
+<div class="block block-list <?php echo $class;?>">
+  <div class="block-title">
+    <strong><span><?php echo $this->__('Switch Theme') ?></span></strong>
+  </div>
+  <div class="block-content">
+    <p class="empty">
+      <select id="select-theme" title="<?php echo $this->__('Switch Theme') ?>"
+              onchange="window.location.href=this.value" style="width:100%">
+        <?php foreach ($this->getThemes() as $_key => $_theme): ?>
+        <?php $_selected = ($_key == $this->getCurrentTheme()) ? ' selected="selected"' : '' ?>
+        <option value="<?php echo $this->getCurrentUrl($_key) ?>"<?php echo $_selected ?>><?php echo
+        $this->escapeHtml($_theme);?></option>
+        <?php endforeach; ?>
+      </select>
+    </p>
+  </div>
+</div>
+<?php endif; ?>
