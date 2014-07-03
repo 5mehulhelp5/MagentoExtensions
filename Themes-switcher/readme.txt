@@ -7,6 +7,6 @@ This extension is tested on magento 1.5 to 1.8 version and it's working fine in 
 My email address is : 5mehulhelp5@gmail.com
 Skype Id: mehul.chaudhari.
 
-It's My Pleasure if i can help you in any thing.
+It's My Pleasure if I can help you in anything.
 
 Thanks For Your Time.
