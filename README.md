@@ -1,0 +1,4 @@
+MagentoExtensions
+=================
+
+Magento Extension Directory
