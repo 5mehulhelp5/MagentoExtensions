@@ -1,6 +1,6 @@
 This is a read me file
 
-Product Popularity is a magneto extension and this extension will provide a frontend utility to show the product popularity in catalog page(category page), product page and product compare page etc
+Product Popularity is a magento extension and this extension will provide a frontend utility to show the product popularity in catalog page(category page), product page and product compare page etc
 
 This extension is tested on magento 1.5 to 1.8 version and it's working fine in all those version but if you still found any problem on that please contact me
 
