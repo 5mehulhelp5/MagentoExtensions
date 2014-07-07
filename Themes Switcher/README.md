@@ -1,6 +1,6 @@
 This is a read me file
 
-Theme switcher is a magneto extension and this extension will provide a frontend utility to switch over a different themes.
+Theme switcher is a magento extension and this extension will provide a frontend utility to switch over a different themes.
 
 This extension is tested on magento 1.5 to 1.8 version and it's working fine in all those version but if you still found any problem on that please contact me
 
