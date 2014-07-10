@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MehulChaudhari_Shippingcart>
+      <version>0.1.0</version>
+    </MehulChaudhari_Shippingcart>
+  </modules>
+  <global>
+    <helpers>
+      <shippingcart>
+        <class>MehulChaudhari_Shippingcart_Helper</class>
+      </shippingcart>
+    </helpers>
+	<models>
+	  <shippingcart>
+		<class>MehulChaudhari_Shippingcart_Model</class>
+		<resourceModel>shippingcart_mysql4</resourceModel>
+	  </shippingcart>
+	</models>
+    <events>
+	  <sales_quote_collect_totals_before> <!-- identifier of the event we want to catch -->
+        <observers>
+          <sales_quote_collect_totals_before_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>shippingcart/observer</class> <!-- observers class alias -->
+            <method>Applyshipping</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </sales_quote_collect_totals_before_handler>
+        </observers>
+      </sales_quote_collect_totals_before>
+    </events>
+  </global>
+</config> 
