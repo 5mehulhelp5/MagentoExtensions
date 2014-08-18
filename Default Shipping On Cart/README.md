@@ -1,6 +1,6 @@
 This is a read me file
 
-Default Shipping On Cart is a magento extension and this extension will provide a frontend utility to show a by default shipping charge magento cart page.
+Default Shipping On Cart is a magento extension and this extension will provide a frontend utility to show a by default shipping charge on magento cart page.
 
 This extension is tested on magento 1.5 to 1.8 version and it's working fine in all those version but if you still found any problem on that please contact me
 
