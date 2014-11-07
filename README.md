@@ -22,16 +22,22 @@ I have a really Good experience in PHP development. i have been in this developm
 Skills
 ----------
 PHP Framework:- Zend, Cake
+<br/>
 Ecommerce Framework:- WORDPRESS Woocommerce, Magento, Joomla K2 etc...
+<br/>
 CMS:- Wordpress,Joomla
+<br/>
 
 Freelancing Job Profile:-
+<br/>
 1>Elance
+<br/>
 <object width="300" height="360"><param name="movie" value="https://images.elance.com/media/flash/widget/profile/profile-widget-300.swf?userId=5839706&catId=&defaultTab=0&rid=3N8AC"></param><param name="allowFullScreen" value="false"></param><param name="allowscriptaccess" value="always"></param><embed src="https://images.elance.com/media/flash/widget/profile/profile-widget-300.swf?userId=5839706&catId=&defaultTab=0&rid=3N8AC" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="300" height="360"></embed></object>
-
+<br/>
 <a href="http://mehulchaudhari.elance.com" target="_blank">Fore More Detail</a>
-
+<br/>
 2>Odesk
+<br/>
 <a href="https://www.odesk.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
 <br/>
 
