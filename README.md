@@ -19,7 +19,7 @@ My Self
 
 I have a really Good experience in PHP development. i have been in this development field from last 3 years.
 
-Skill
+Skills
 ----------
 PHP Framework:- Zend, Cake
 Ecommerce Framework:- WORDPRESS Woocommerce, Magento, Joomla K2 etc...
