@@ -2,7 +2,7 @@ This is a read me file
 
 Upshare is a magento extension and this extension will provide a frontend utility to share a any content in Upshare.
 
-For More info Please visit <a href="https://www.upshare.co/partners/sign_up?origin=wp">Upshare</a>
+For More info Please visit <a href="https://www.upshare.co/partners/sign_up?origin=wp" target="_blank">Upshare</a>
 
 This extension is tested on magento 1.5 to 1.8 version and it's working fine in all those version but if you still found any problem on that please contact me
 
