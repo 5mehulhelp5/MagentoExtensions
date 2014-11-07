@@ -1,0 +1,14 @@
+<?php
+$enable = Mage::getStoreConfig('upshare/settings/enable');
+if(!$enable) return;
+$partnerId = Mage::getStoreConfig('upshare/settings/partnerid');
+if($partnerId!=""){
+?>
+  <script src="https://widget.upshare.co/v1/app/public/js/up-load.js?partnerid=<?php echo $partnerId; ?>" id="UPWidget"></script>
+<?php
+}else{
+?>
+   <script src="https://widget.upshare.co/v1/app/public/js/up-load.js" id="UPWidget"></script>
+<?php
+}
+?>
