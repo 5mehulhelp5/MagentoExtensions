@@ -34,5 +34,5 @@ Freelancing Job Profile:-
 2>Odesk
 
 
-<a href="http://mehulchaudhari.elance.com" target="_blank">Fore More Detail</a>
+<a href="https://www.odesk.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
 Thanks 
