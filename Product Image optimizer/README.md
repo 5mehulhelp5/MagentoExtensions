@@ -1,6 +1,6 @@
 This is a read me file
 
-Image optimizer is a magento extension and this extension will provide a backend utility to optimize a magento product image while saving using a yahoo smushit .
+Image optimizer is a magento extension and this extension will provide a backend utility to optimize a magento product image while saving(using a yahoo smushit).
 
 For More info Please visit <a href="http://www.smushit.com/ysmush.it/" target="_blank">Smushit</a>
 

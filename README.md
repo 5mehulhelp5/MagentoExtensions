@@ -3,11 +3,13 @@ MagentoExtensions
 
 Magento Extension Directory
 
-1> Themes Switcher :- Theme switcher is a magento extension and this extension will provide a frontend utility to switch over a different themes
+1> Themes Switcher :- Theme switcher is a magento extension and this extension will provide a frontend utility to switch over a different themes.
 
 2> Default Shipping On Cart :- Default Shipping On Cart is a magento extension and this extension will provide a frontend utility to show a by default shipping charge magento cart page.
 
-3> Upshare :- Upshare is a magento extension and this extension will provide a frontend utility to share a content on Upshare. Where you can collect all data of all user 
+3> Upshare :- Upshare is a magento extension and this extension will provide a frontend utility to share a content on Upshare. Where you can collect all data of all user.
+
+4> Image Optimizer :- Image Optimizer is a magento extension and this extension will provide a backend utility to optimize a magento product image while saving(using a yahoo smushit).
 
 More comming soon.....
 
