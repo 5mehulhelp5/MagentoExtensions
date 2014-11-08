@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+	<config>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<imagesmashit translate="title" module="imagesmashit">
+											<title>Images Optiomization Section</title>
+											<sort_order>0</sort_order>
+										</imagesmashit>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</config>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MehulChaudhari_Imagesmashit>
+      <version>0.1.0</version>
+    </MehulChaudhari_Imagesmashit>
+  </modules>
+  <global>
+    <helpers>
+      <imagesmashit>
+        <class>MehulChaudhari_Imagesmashit_Helper</class>
+      </imagesmashit>
+    </helpers>
+	<models>
+	  <imagesmashit>
+		<class>MehulChaudhari_Imagesmashit_Model</class>
+		<resourceModel>imagesmashit_mysql4</resourceModel>
+	  </imagesmashit>
+	</models>
+    <events>
+	  <catalog_product_save_after> <!-- identifier of the event we want to catch -->
+        <observers>
+          <catalog_product_save_after_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>imagesmashit/observer</class> <!-- observers class alias -->
+            <method>smashit</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </catalog_product_save_after_handler>
+        </observers>
+      </catalog_product_save_after>
+    </events>
+  </global>
+</config> 

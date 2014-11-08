@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MehulChaudhari_Imagesmashit>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </MehulChaudhari_Imagesmashit>
+  </modules>
+</config>
