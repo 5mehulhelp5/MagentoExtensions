@@ -11,6 +11,8 @@ Magento Extension Directory
 
 4> Image Optimizer :- Image Optimizer is a magento extension and this extension will provide a backend utility to optimize a magento product image while saving(using a yahoo smushit).
 
+5> Idealo Product Export :- Idealo product is a magento extension and this extension will provide a backend utility to export your store product for use in idealo.
+
 More comming soon.....
 
 
