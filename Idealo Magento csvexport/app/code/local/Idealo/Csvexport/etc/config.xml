@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<config>
+      <modules>
+        <Idealo_Csvexport>
+          <version>2.20.0</version>
+        </Idealo_Csvexport>
+      </modules>
+	  
+   <global>
+	
+	<translate>
+		<modules>
+			<Idealo_Csvexport>
+				<files>
+					<default>Idealo_Csvexport.csv</default>
+				</files>
+			</Idealo_Csvexport>
+		</modules>
+	</translate>
+	
+	<models>
+   		<csvexport>
+           <class>Idealo_Csvexport_Model</class>
+       </csvexport>
+    </models>
+    
+      <helpers>
+       <csvexport>
+           <class>Idealo_Csvexport_Helper</class>
+       </csvexport>
+      </helpers>   
+
+	  <blocks>
+	   <csvexport>
+	   		<class>Idealo_Csvexport_Block</class>
+	   	</csvexport>
+	   </blocks>
+	   
+   </global>
+    
+   <admin>
+		<routers>
+			<csvexport>
+				<use>admin</use>
+				<args>
+					<module>Idealo_Csvexport</module>
+					<frontName>csvexport</frontName>
+				</args>
+			</csvexport>
+		</routers>
+	</admin>
+	
+	<adminhtml>
+	
+	 <translate>
+		<modules>
+			<Idealo_Csvexport>
+				<files>
+					<default>Idealo_Csvexport.csv</default>
+				</files>
+			</Idealo_Csvexport>
+		</modules>
+	</translate>
+	
+	 <menu>
+		<idealo translate="title" module="csvexport">
+			<title>idealo</title>
+			<sort_order>100</sort_order>
+			<children>
+			<csvexportbackend translate="title" module="csvexport">
+				<title>CSV Export</title>
+				<sort_order>0</sort_order>
+				<action>csvexport/adminhtml_csvexportbackend</action>
+			</csvexportbackend>
+			</children>
+		</idealo>
+	</menu>
+	
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<idealo translate="title" module="csvexport">
+						<title>idealo</title>
+						<sort_order>100</sort_order>
+						<children>
+							<csvexportbackend translate="title">
+									<title>CSV Export</title>
+									<sort_order>0</sort_order>
+							</csvexportbackend>
+						</children>
+					</idealo>
+					<system>
+						<children>
+							<config>
+								<children>
+									<csvexport translate="title" module="csvexport">
+										<title>csvexport</title>
+									</csvexport>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+
+	<layout>
+		<updates>
+			<csvexport>
+			    <file>csvexport.xml</file>
+			</csvexport>
+		</updates>
+	</layout>
+	</adminhtml>
+
+	<crontab>
+        <jobs>
+            <idealo_csvexport_make>
+                <schedule>
+                    <cron_expr> 0 0,6,8,10,12,14,16,18,20,22 * * * </cron_expr>
+                </schedule>
+                <run>
+                	<model>csvexport/observer::runExport</model>
+                </run>
+            </idealo_csvexport_make>
+        </jobs>
+    </crontab>
+
+</config> 

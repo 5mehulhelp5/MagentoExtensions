@@ -1,0 +1,1045 @@
+<?xml version="1.0"?>
+
+<!-- 	
+	Idealo Exportmodul for Magento 1.4.1 and 1.5.0
+ 	
+	(c) idealo 2011,
+	
+	Please note that this extension is provided as is and without any warranty. It is recommended to always backup your installation prior to use. Use at your own risk.
+ 	    
+ 	Extended by
+ 	
+ 	Christoph Zurek (Idealo Internet GmbH, http://www.idealo.de) 
+-->
+
+<config>
+	<tabs>
+		<csvexport translate="label" module="csvexport">
+			<label>idealo</label>
+			<sort_order>508</sort_order>
+		</csvexport>
+	</tabs>
+	<sections>
+		<csvexport translate="label" module="csvexport">
+			<tab>csvexport</tab>
+			<label>idealo csv settings</label>
+			<sort_order>1000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>0</show_in_website>
+			<show_in_store>0</show_in_store>
+			<groups>
+			<store translate="label">
+					<label>store</label>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<store translate="label,comment">
+							<label>Store</label>
+							<comment>Please select which shop your articles are to be exported from.</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_store</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</store>
+					</fields>
+			</store>
+				<file translate="label,comment" module="csvexport">
+					<label>Feed</label>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<name translate="label,comment" module="csvexport">
+							<label>Feed</label>
+							<comment>Please enter a feed name, if the export feed should be saved to server. (export/ directory)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</name>
+						<seperator translate="label,comment" module="csvexport">
+							<label>Column dividing value</label>
+							<comment>Examples: $ (dollar sign) | (pipe) Please do NOT use the semicolon ;</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</seperator>
+						<quoting translate="label,comment" module="csvexport">
+							<label>Text dividing value</label>
+							<comment>Examples: " (speech marks) ' (single inverted comma) # (hash symbol)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</quoting>
+					</fields>
+				</file>
+				<shipping_de translate="label" module="csvexport">
+					<label>Shipping to Germany</label>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label,comment" module="csvexport">
+							<label>Shipping to Germany</label>
+							<comment>Would you like to export shipping costs for DE?</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<costs translate="label,comment" module="csvexport">
+							<label>Shipping costs for Germany</label>
+							<comment>Please enter the shipping costs for Germany. e.g. 4.10</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</costs>
+						<calculation translate="label,comment" module="csvexport">
+							<label>Calculation type</label>
+							<comment>How should the shipping costs be calculated?</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionShippingArt</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</calculation>
+						<free_shipping translate="label,comment" module="csvexport">
+							<label>Shipping cost boundary</label>
+							<comment>Please enter the amount above which you ship free of charge. e.g. 50</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping>
+						<free_brands translate="label,comment" module="csvexport">
+							<label>Free-shipping manufacturer(s)</label>
+							<comment>Please enter the manufacturers whose articles you ship free of charge, separated by a semicolon. e.g. "LG;Samsung"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_brands>
+						<free_cats translate="label,comment" module="csvexport">
+							<label>Free-shipping categories</label>
+							<comment>Please enter the categories whose articles you ship free of charge. All articles in this category and its sub-categories will be sent to the CSV feed as "free-shipping articles".</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>31</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_cats>
+					</fields>
+				</shipping_de>
+				<shipping_at translate="label" module="csvexport">
+					<label>Shipping to Austria</label>
+					<sort_order>21</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label,comment" module="csvexport">
+							<label>Shipping to Austria</label>
+							<comment>Would you like to export shipping costs for AT?</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<costs translate="label,comment" module="csvexport">
+							<label>Shipping costs for AT</label>
+							<comment>Please enter the shipping costs for Austria. e.g. 4.10</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</costs>
+						<calculation translate="label,comment" module="csvexport">
+							<label>Calculation type</label>
+							<comment>How should the shipping costs be calculated?</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionShippingArt</source_model>
+							 <sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</calculation>
+						<free_shipping translate="label,comment" module="csvexport">
+							<label>Shipping cost boundary</label>
+							<comment>Please enter the amount above which you ship free of charge. e.g. 50</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping>
+						<free_brands translate="label,comment" module="csvexport">
+							<label>Free-shipping manufacturer(s)</label>
+							<comment>Please enter the manufacturers whose articles you ship free of charge, separated by a semicolon. e.g. "LG;Samsung"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_brands>
+						<free_cats translate="label,comment" module="csvexport">
+							<label>Free-shipping categories</label>
+							<comment>Please enter the categories whose articles you ship free of charge. All articles in this category and its sub-categories will be sent to the CSV feed as "free-shipping articles".</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>31</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_cats>
+					</fields>
+				</shipping_at>
+				<shipping_uk translate="label" module="csvexport">
+					<label>Shipping to UK</label>
+					<sort_order>21</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label,comment" module="csvexport">
+							<label>Shipping to UK</label>
+							<comment>Would you like to export shipping costs for UK?</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<costs translate="label,comment" module="csvexport">
+							<label>Shipping costs for UK</label>
+							<comment>Please enter the shipping costs for UK. e.g. 4.10</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</costs>
+						<calculation translate="label,comment" module="csvexport">
+							<label>Calculation type</label>
+							<comment>How should the shipping costs be calculated?</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionShippingArt</source_model>
+							 <sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</calculation>
+						<free_shipping translate="label,comment" module="csvexport">
+							<label>Shipping cost boundary</label>
+							<comment>Please enter the amount above which you ship free of charge. e.g. 50</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping>
+						<free_brands translate="label,comment" module="csvexport">
+							<label>Free-shipping manufacturer(s)</label>
+							<comment>Please enter the manufacturers whose articles you ship free of charge, separated by a semicolon. e.g. "LG;Samsung"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_brands>
+						<free_cats translate="label,comment" module="csvexport">
+							<label>Free-shipping categories</label>
+							<comment>Please enter the categories whose articles you ship free of charge. All articles in this category and its sub-categories will be sent to the CSV feed as "free-shipping articles".</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>31</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_cats>
+					</fields>
+				</shipping_uk>
+				<shipping_it translate="label" module="csvexport">
+					<label>Shipping to IT</label>
+					<sort_order>21</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label,comment" module="csvexport">
+							<label>Shipping to IT</label>
+							<comment>Would you like to export shipping costs for IT?</comment>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</active>
+						<costs translate="label,comment" module="csvexport">
+							<label>Shipping costs for IT</label>
+							<comment>Please enter the shipping costs for IT. e.g. 4.10</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</costs>
+						<calculation translate="label,comment" module="csvexport">
+							<label>Calculation type</label>
+							<comment>How should the shipping costs be calculated?</comment>
+							<frontend_type>text</frontend_type>
+							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionShippingArt</source_model>
+							 <sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</calculation>
+						<free_shipping translate="label,comment" module="csvexport">
+							<label>Shipping cost boundary</label>
+							<comment>Please enter the amount above which you ship free of charge. e.g. 50</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping>
+						<free_brands translate="label,comment" module="csvexport">
+							<label>Free-shipping manufacturer(s)</label>
+							<comment>Please enter the manufacturers whose articles you ship free of charge, separated by a semicolon. e.g. "LG;Samsung"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_brands>
+						<free_cats translate="label,comment" module="csvexport">
+							<label>Free-shipping categories</label>
+							<comment>Please enter the categories whose articles you ship free of charge. All articles in this category and its sub-categories will be sent to the CSV feed as "free-shipping articles".</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>31</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_cats>
+					</fields>
+				</shipping_it>
+				<moneyorder translate="label" module="csvexport">
+					<label>Cash in advance</label>
+					<sort_order>22</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						 <countries translate="label,comment" module="csvexport">
+							<label>Countries</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</moneyorder>
+				<cc translate="label" module="csvexport">
+					<label>Cash on delivery</label>
+					<sort_order>23</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						 <countries translate="label,comment" module="csvexport">
+							<label>Countries</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</cc>
+				<paypal translate="label" module="csvexport">
+					<label>PayPal</label>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</paypal>
+				<creditcard translate="label" module="csvexport">
+					<label>Credit card</label>
+					<sort_order>31</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</creditcard>
+				<invoice translate="label" module="csvexport">
+					<label>Invoice</label>
+					<sort_order>32</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</invoice>
+				<directdebit translate="label" module="csvexport">
+					<label>Direct debit / Banker's draft</label>
+					<sort_order>32</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</directdebit>
+				<moneybookers translate="label" module="csvexport">
+					<label>Skrill</label>
+					<sort_order>32</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</moneybookers>
+				<sofortueberweisung translate="label" module="csvexport">
+					<label>Sofort</label>
+					<sort_order>32</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<active translate="label" module="csvexport">
+ 							<label>Active</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionYesNo</source_model>
+							 <sort_order>1</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+						<extra_charge_fix translate="label,comment" module="csvexport">
+							<label>Fixed surcharge</label>
+							<frontend_type>text</frontend_type>
+							<comment>Please enter the fixed surcharge. e.g. 2.95</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_charge_fix>
+						<extra_charge_nofix translate="label,comment" module="csvexport">
+ 							<label>Surcharge in %?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <frontend_type>text</frontend_type>
+							 <comment>Please enter the percentage surcharge. e.g. 1.69</comment>
+							 <sort_order>20</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </extra_charge_nofix>
+						 <shipping_incl translate="label" module="csvexport">
+ 							<label>Does this already include shipping?</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_optionInclShipping</source_model>
+							 <sort_order>30</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </shipping_incl>
+						 <payment_max translate="label,comment" module="csvexport">
+							<label>Upper price boundary for this payment method.</label>
+							<comment>GBP The max. order value for which this method of payment can be used. (Example: "500" or "99.99" …)</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</payment_max>
+						<countries translate="label,comment" module="csvexport">
+							<label>Does this already include shipping?</label>
+							<comment>Please enter which countries you offer this payment method for.</comment>
+							 <frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCountries</source_model>
+							<sort_order>41</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</countries>
+					</fields>
+				</sofortueberweisung>
+				<portocomment translate="label" module="csvexport">
+					<label>Shipping comment</label>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						<value translate="label,comment" module="csvexport">
+							<label>Shipping comment</label>
+							<comment>100 characters max.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</value>
+					</fields>
+				</portocomment>
+				<campaign translate="label,comment" module="csvexport">
+					<label>Campaigns</label>
+					<comment>This adds an additional parameter to the end of the product links in the export feed. Clicks and conversions can then be tracked using a tracking tool.</comment>
+					<sort_order>50</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <active translate="label" module="csvexport">
+ 							<label>Campaigns</label> 
+ 							<frontend_type>select</frontend_type>
+							 <source_model>csvexport/source_OptionCampaign</source_model>
+							 <sort_order>3</sort_order>
+							 <show_in_default>1</show_in_default>
+							 <show_in_website>0</show_in_website>
+							 <show_in_store>0</show_in_store>
+						 </active>
+					</fields>
+				</campaign>				
+				<extra translate="label" module="csvexport">
+					<label>Additional attributes</label>
+					<sort_order>60</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <extra_attributes translate="label,comment" module="csvexport">
+							<label>Additional attributes (will be added to end of product name)</label>
+							<comment>Please enter the additional attributes you would like to export. Please separate the attributes using a semicolon ";". e.g. "shoe_size;color"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</extra_attributes>
+						<delivery_attribute translate="label,comment" module="csvexport">
+							<label>Delivery Time attribute</label>
+							<comment>Please enter the attribute name for the "Delivery Time" attribute. e.g. "delivery_time"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</delivery_attribute>
+						<manufacturer_attribute translate="label,comment" module="csvexport">
+							<label>Manufacturer attribute</label>
+							<comment>Please enter the attribute name for the "Manufacturer" attribute. e.g. "manufacturer" or "brand"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</manufacturer_attribute>
+						<manufacturer_number_attribute translate="label,comment" module="csvexport">
+							<label>Manufacturer Part Number attribute</label>
+							<comment>Please enter the attribute name for the "Manufacturer Part Number" attribute. e.g. "mpn"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>31</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</manufacturer_number_attribute>
+						 <ean_attribute translate="label,comment" module="csvexport">
+							<label>EAN attribute</label>
+							<comment>Please enter the attribute name for the "EAN" attribute. e.g. "ean"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</ean_attribute>
+					</fields>
+				</extra>				
+				<step translate="label" module="csvexport">
+					<label>Export interval</label>
+					<sort_order>70</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <interval translate="label,comment" module="csvexport">
+							<label>Interval</label>
+							<comment>Please define the stages in which offers should be exported. e.g. 50, 100, 500, 1000</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</interval>
+					</fields>
+				</step>
+				<cron translate="label" module="csvexport">
+					<label>Automatic CSV export</label>
+					<sort_order>80</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <cron translate="label,comment" module="csvexport">
+							<label>Automatic article export</label>
+							<comment>Please select whether the CSV feed should automatically be regenerated once every two hours between 6am and midnight. Please note that this can cause a system overload if large amounts of articles are being exported! In such cases, activating the automatic CSV export is not recommended.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>csvexport/source_OptionYesNo</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</cron>
+					</fields>
+				</cron>	
+				<minimumordervalue translate="label" module="csvexport">
+					<label>Minimum order value</label>
+					<sort_order>90</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <minimumordervalue translate="label,comment" module="csvexport">
+							<label>Minimum order value</label>
+							<comment>Please enter your minimum order value. The affected offers will automatically be assigned a corresponding shipping comment.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</minimumordervalue>
+					</fields>
+				</minimumordervalue>
+				<smallordervalue translate="label" module="csvexport">
+					<label>Minimum value surcharge</label>
+					<sort_order>100</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>0</show_in_website>
+					<show_in_store>0</show_in_store>
+					<fields>
+						 <smallordervalue translate="label,comment" module="csvexport">
+							<label>Minimum value surcharge</label>
+							<comment>Please enter your minimum value surcharge amount. e.g.: 5.00 The affected offers will automatically be assigned a corresponding shipping comment.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</smallordervalue>
+						<upperlimit translate="label,comment" module="csvexport">
+							<label>Minimum value surcharge boundary</label>
+							<comment>Please enter the amount above which the minimum value surcharge no longer applies. e.g.: 50.00</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+						</upperlimit>
+					</fields>
+				</smallordervalue>						
+			</groups>		
+		</csvexport>
+	</sections>
+</config>

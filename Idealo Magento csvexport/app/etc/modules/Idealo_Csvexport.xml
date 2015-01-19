@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+	   <Idealo_Csvexport>
+	      <active>true</active>
+	      <codePool>local</codePool>
+	      <version>0.1.0</version>
+	   </Idealo_Csvexport>
+	</modules>
+</config>

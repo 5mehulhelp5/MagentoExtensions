@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+		<csvexport_adminhtml_csvexportbackend_index>
+			<reference name="content">
+				<block type="csvexport/adminhtml_csvexportbackend" name="csvexportbackend" template="csvexport/csvexportbackend.phtml"/>
+			</reference>
+		</csvexport_adminhtml_csvexportbackend_index>
+</layout>

@@ -1,0 +1,156 @@
+<style type="text/css">
+	#myDiv
+	{
+		background-color:#DCDCDC;
+		position:absolute;	
+		left:0px;
+		top:0px;
+		width:600px;
+		height:100px;
+		overflow:auto;
+		scrolling:no;
+	}
+	
+	.myFont
+	{	
+		position:absolute;	
+		left:0px;
+		top:19px;
+		font-family:Arial;
+		font-size:48px;
+	}
+</style>
+
+
+<center>
+	<table width = "80%">
+	<colgroup>
+	    <col width="20%">
+	    <col width="60%">
+	    <col width="20%">
+	</colgroup>
+
+	<tr>
+		<td>
+			<center>
+				<h2>
+				<?php echo $this->__('idealo Partner Login'); ?>:
+				<a href="https://partner.idealo.de/partnerLogin/start" target="_blank"><img src = "<?php echo $imageUrlPath; ?>/export/Img/idealo.gif"></a><br><br><br>
+				<?php echo $this->__('Did you know?'); ?></b><br>
+				</h2>		 
+				<div><a href="http://www.idealo.at/" target="_blank"><img src = "<?php echo $imageUrlPath; ?>/export/Img/idealo-at.gif"></a></div><br>
+				<div><a href="http://www.idealo.co.uk/" target="_blank"><img src = "<?php echo $imageUrlPath; ?>/export/Img/idealo-uk.gif"></a></div><br>
+				<div><a href="http://www.idealo.fr/" target="_blank"><img src = "<?php echo $imageUrlPath; ?>/export/Img/idealo-fr.gif"></a></div><br>
+				<div><a href="http://www.idealo.it/" target="_blank"><img src = "<?php echo $imageUrlPath; ?>/export/Img/idealo-it.gif"></a></div><br>
+
+			</center>
+		</td>
+		<td>
+		<?php if($writeable === false): ?>
+			<center><b>
+				<?php echo $this->__('The "export" folder is not currently writeable!'); ?></b><br><br>
+				<?php echo $this->__("Please check that the \"export\" folder in your shop's Main Directory exists and is writeable!"); ?>
+			</center>
+		<?php elseif($errorSettings !== true): ?>
+			<b>
+				<center>			 				
+					<br><br>
+					<h1><?php echo $this->__('The export was unsuccessful!'); ?></h1>
+					<?php echo $this->__('Please check settings under'); ?> "<?php echo $this->__('system'); ?> ->  <?php echo $this->__('configuartion'); ?> -> 
+					<?php echo $this->__('idealo csv settings'); ?>" <?php echo $this->__('and fill in/amend as necessary'); ?>:<br><br>
+					<ul>		
+						<?php foreach($errorSettings as $error): ?>
+							<li><?php echo $this->__($error); ?>
+						<?php endforeach; ?>
+					</ul>
+				</center>
+		<?php else: ?>	
+			<?php if($form['export'] === true): ?>
+				<div id="myDiv">
+					<?php if($form['makeFile'] === true): ?>
+			    		<span class="myFont"><?php echo $this->__('Generating large CSV'); ?> <blink>...</blink></span><br><br><br><br><br>	    		
+			    		<?php if($form['makeFile'] === true): ?>
+				    		<script type="text/javascript">
+								parent.location.href="?end=1";
+							</script>			
+						<?php endif; ?>
+			    	<?php else: ?>
+		    			<span class="myFont"><?php echo $this->__('Waiting for'); ?> <?php echo $form['toExport']; ?> <?php echo $this->__('article(s)'); ?> <blink>...</blink></span><br><br><br><br><br>
+						<script type="text/javascript">
+							document.location.href="?part=<?php echo $form['part']; ?>&export=1";
+						</script>
+					<?php endif; ?>
+				</div>
+			<?php else: ?>
+				<center>
+					<font size = 4><b>
+						<a href="http://www.idealo.de" target="_blank"><img src = "<?php echo $form['baseUrl']; ?>/export/Img/idealo-de.gif"></a><br>
+						<font size="-2"><?php echo $this->__('idealo - csv export module v.'); ?> <?php echo $form['version']; ?> <?php echo $this->__('for Magento 1.4.x - 1.7.0 from'); ?> <?php echo $form['versionDate']; ?></font><br><br>
+					<?php if($form['end'] === false): ?>
+						<?php if($form['checkVersion'] === true): ?>
+							<font size="-2"><?php echo $this->__('The new version'); ?> 
+											<?php echo $form['newVersion']; ?> 
+											<?php echo $this->__('of the module is available on idealo.'); ?></font><br><br>
+											<a href="<?php echo $form['downloadSite']; ?>" target="_newtab"><b><?php echo $this->__('to download page'); ?></b></a></blink><br><br>			
+						<?php endif; ?>
+							<?php echo $this->__('Welcome to your idealo CSV export module.'); ?>
+							<br><br><br>
+							<?php echo $this->__('Please go to'); ?>:
+							<br><br>
+							<?php echo $this->__('system'); ?> → <?php echo $this->__('configuration'); ?> → IDEALO → <?php echo $this->__('idealo csv settings'); ?><br><br>
+							<?php echo $this->__('to set up your module settings'); ?>
+							<br><br><br>
+							<?php echo $this->__('Clicking on "Export articles" will generate an optimal idealo CSV feed.'); ?>
+							<br><br>
+							<iframe name="export_target" width="600" height=50 frameBorder="0" scrolling="no"></iframe><br>
+							<script type="text/javascript">
+							function start_export() {
+								window.frames.export_target.document.write("<html><body bgcolor=\"#DCDCDC\" topmargin=\"0\" leftmargin=\"0\"><div style=\"font-family:Arial;font-size:48px\"><?php echo $this->__('Waiting for'); ?> <?php echo $form['toExport']; ?> <?php echo $this->__('article(s)'); ?> <blink>...</blink></div><br><br><br></body></html>");
+								document.getElementById("export_button").disabled = true;
+							}
+							</script>
+							<form action="<?php echo $form['from']; ?>" method="get" target="export_target" onsubmit="start_export()">				
+							<input id="export_button" type="submit" value="<?php echo $this->__('Export articles'); ?>" /><b> * </b>
+							<input type="hidden" name="export" value="1">
+							<input id ="part" type="hidden" name="part" value="0">
+						</form>
+						<br><br></font></b>
+						*<?php echo $this->__('idealo shall not be held liable for any shortfalls'); ?> <?php echo $this->__('in the smooth operation and functionality of its export modules'); ?> <?php echo $this->__('nor for the safety of data transferred or for any damages incurred.'); ?> <?php echo $this->__('idealo reserves the right to suspend its export module service at any time.'); ?> <?php echo $this->__('In using our export modules'); ?> <?php echo $this->__('the co-operation partner agrees to our liability disclaimer.'); ?>
+					<?php else: ?>
+						<iframe name="export_target" width="1" height=1 frameBorder="0"></iframe><br>					
+						<?php if($form['end'] === true): ?>
+							<?php if(isset($_SESSION['idealo_csv_separatorArray']) && isset($_SESSION['idealo_csv_separatorInt'])): ?>
+								<?php if($_SESSION['idealo_csv_separatorInt'] > 0): ?>
+									HINWEIS:<br><br>
+				    				Der eingestellte Spaltentrenner <?php echo $form['seperator']; ?> kommt in Ihren Texten <?php echo $_SESSION['idealo_csv_separatorInt']; ?> mal vor!<br><br>
+									Dies kann zur Spaltenverschiebungen in Ihrer Datei fuehren<br><br>
+									Alternativ sollten Sie einen der folgenden Spaltentrenner verwenden:<br><br>
+									<?php if($form['$separatorInt'] === true): ?>
+										Leider kann Ihnen das Modul keinen Vorschlag machen. Wenden Sie sich bitte an csv@idealo.de;<br><br>
+									<?php else: ?>
+										<?php foreach($_SESSION['idealo_csv_separatorArray'] as $separ): ?>
+											<?php if($separ['comes'] == 0): ?>
+												<?php echo $separ['separator']; ?> <br>
+											<?php endif; ?>
+							    		<?php endforeach; ?>
+					    			<?php endif; ?>
+								<?php endif; ?>
+							<?php endif; ?>
+							<?php echo $this->__('You can download your feed at the following link'); ?>:
+							<br><br><br>
+							<a href="<?php echo $form['baseUrl']; ?>/export/<?php echo $form['fileName']; ?>"> <?php echo $form['baseUrl']; ?>/export/<?php echo $form['fileName']; ?></a>
+							<br><br><br>
+							<?php echo $this->__('Please send this link to csv@idealo.co.uk'); ?>
+							<br><br>
+						<?php endif; ?>
+					<?php endif; ?>
+				</center>	
+			<?php endif; ?>	  			
+		<?php endif; ?>
+		</td>
+			<td>
+				<?php echo $rightColumn; ?>	
+			</td>
+		</tr>
+	</table>
+</center>
