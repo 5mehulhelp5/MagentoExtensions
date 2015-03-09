@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Weboffice_GoogleShoppingApi>
+            <active>true</active>
+            <codePool>community</codePool>  
+			<depends>
+				<Mage_Catalog/>
+			</depends>
+        </Weboffice_GoogleShoppingApi>
+    </modules>
+</config>

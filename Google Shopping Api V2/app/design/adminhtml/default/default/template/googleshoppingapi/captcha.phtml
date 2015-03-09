@@ -1,0 +1,19 @@
+<?php
+/**
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2015 Weboffice UG (haftungsbeschränkt) (http://www.Weboffice.de)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php if ($this->getGcontentCaptchaToken() && $this->getGcontentCaptchaUrl()): ?>
+<ul class="messages">
+    <li class="error-msg">
+        <ul>
+            <li><img src="<?php echo $this->getGcontentCaptchaUrl() ?>"> <input type="text" id="user_confirm"> <?php echo $this->getConfirmButtonHtml() ?></li>
+        </ul>
+    </li>
+</ul>
+<?php endif; ?>

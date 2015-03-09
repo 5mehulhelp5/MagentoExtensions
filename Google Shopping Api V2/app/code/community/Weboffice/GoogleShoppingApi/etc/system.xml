@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+    <config>
+    <tabs>
+    <bvt_modules translate="label">
+        <label>Weboffice Modules</label>
+        <sort_order>1000</sort_order>
+    </bvt_modules>
+    </tabs>
+    <sections>
+    <bvt_googleshoppingapi_config translate="label">
+        <label>GoogleShoppingAPI</label>
+        <tab>bvt_modules</tab>
+        <frontend_type>text</frontend_type>
+        <sort_order>200</sort_order>
+        <show_in_default>1</show_in_default>
+        <show_in_website>1</show_in_website>
+        <show_in_store>1</show_in_store>
+        <groups>
+        <settings translate="label">
+            <label>Settings</label>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <fields>
+                <account_id translate="label">
+                    <label>Account ID</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </account_id>
+                <!--<login translate="label">
+                    <label>Account Login</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </login>
+                <password translate="label">
+                    <label>Account Password</label>
+                    <frontend_type>obscure</frontend_type>
+                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </password>
+                <account_type translate="label">
+                    <label>Account Type</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>googleshoppingapi/source_accounttype</source_model>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+				</account_type>-->
+                <target_country translate="label">
+                    <label>Target Country</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>googleshoppingapi/source_country</source_model>
+                    <sort_order>90</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </target_country>
+                <observed translate="label">
+                    <label>Update Google Shopping Item when Product is Updated</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </observed>
+                <debug translate="label">
+                    <label>Debug</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <sort_order>140</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </debug>
+                <destinations translate="label">
+                    <label>Destinations</label>
+                    <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                    <sort_order>150</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </destinations>
+                <product_search translate="label">
+                    <label>Google Product Search</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>googleshoppingapi/source_destinationstates</source_model>
+                    <sort_order>151</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </product_search>
+                <product_ads translate="label">
+                    <label>Product Ads</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>googleshoppingapi/source_destinationstates</source_model>
+                    <sort_order>152</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </product_ads>
+                <commerce_search translate="label">
+                    <label>Commerce Search</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>googleshoppingapi/source_destinationstates</source_model>
+                    <sort_order>153</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </commerce_search>
+                <client_id translate="label">
+                    <label>Google Developer Project Client ID</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </client_id>
+                <client_secret translate="label">
+                    <label>Google Developer Project Client Secret</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </client_secret>
+                <autorenew_notlisted translate="label">
+                    <label>Renew not listed items</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <comment>Renew items which are not listed on Google Shopping while performing synchronisation</comment>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </autorenew_notlisted>
+                <autoremove_disabled translate="label">
+                    <label>Remove disabled items</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <comment>Remove items which are disabled in Magento while performing synchronisation</comment>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </autoremove_disabled>
+            </fields>
+        </settings>
+        </groups>
+    </bvt_googleshoppingapi_config>
+    </sections>
+</config>

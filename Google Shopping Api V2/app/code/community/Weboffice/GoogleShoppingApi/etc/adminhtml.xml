@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <googleshoppingapi translate="title" module="googleshoppingapi">
+                    <title>Google Content API v2</title>
+                    <children>
+                        <types translate="title" module="googleshoppingapi">
+                            <title>Manage Attributes</title>
+                            <action>adminhtml/googleShoppingApi_types</action>
+                        </types>
+                        <items translate="title" module="googleshoppingapi">
+                            <title>Manage Items</title>
+                            <action>adminhtml/googleShoppingApi_items</action>
+                        </items>
+                    </children>
+                    <sort_order>70</sort_order>
+                </googleshoppingapi>
+             </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <googleshoppingapi translate="title" module="googleshoppingapi">
+                                <title>Google Content</title>
+                                <sort_order>500</sort_order>
+                                <children>
+                                    <types translate="title">
+                                        <title>Manage Attributes</title>
+                                        <sort_order>0</sort_order>
+                                    </types>
+                                    <items translate="title">
+                                        <title>Manage Items</title>
+                                        <sort_order>5</sort_order>
+                                    </items>
+                                </children>
+                            </googleshoppingapi>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

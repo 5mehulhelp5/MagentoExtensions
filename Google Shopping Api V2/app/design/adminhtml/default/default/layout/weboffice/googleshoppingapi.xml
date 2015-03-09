@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2015 Weboffice UG (haftungsbeschränkt) (http://www.Weboffice.de)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+
+<layout>
+    <adminhtml_googleshoppingapi_items_index>
+        <reference name="head">
+            <action method="addJs"><file>Weboffice/adminhtml/googleshoppingapi.js</file></action>
+        </reference>
+    </adminhtml_googleshoppingapi_items_index>
+</layout>

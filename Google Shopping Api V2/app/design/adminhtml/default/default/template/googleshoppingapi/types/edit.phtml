@@ -1,0 +1,66 @@
+<?php
+/**
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @copyright   Copyright (c) 2015 Weboffice UG (haftungsbeschränkt) (http://www.Weboffice.de)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<script type="text/javascript">
+//<![CDATA[
+var itemType = function() {
+    return {
+        updateAttributes: function() {
+            if ($("select_attribute_set").value != "" && itemType.confirmChanges())
+            {
+                var elements = [$("select_attribute_set"), $("select_target_country")].flatten();
+                $('save_button').disabled = true;
+                new Ajax.Updater("attributes_details", "<?php echo $this->getUrl('*/*/loadAttributes') ?>",
+                    {
+                        parameters:Form.serializeElements(elements),
+                        evalScripts:true,
+                        onComplete:function(){ $('save_button').disabled = false; }
+                    }
+                );
+            }
+        },
+
+        reloadItemTypes: function() {
+            if ($("select_target_country").value != "" && itemType.confirmChanges())
+            {
+                var elements = [$("select_attribute_set"),$("select_target_country")].flatten();
+                new Ajax.Updater("attribute_set_select", "<?php echo $this->getUrl('*/*/loadAttributeSets') ?>",
+                    {
+                        parameters:Form.serializeElements(elements),
+                        evalScripts:true,
+                        onComplete:function(){
+                            $('save_button').disabled = false;
+                            Event.observe($("select_attribute_set"), 'change', itemType.updateAttributes);
+                        }
+                    }
+                );
+                $("attributes_details").innerHTML = "<?php echo $this->__('Please, select Attribute Set and Google Item Type to load attributes') ?>";
+            }
+        },
+
+        confirmChanges: function() {
+            var blocksCount = Element.select($("attributes_details"), "div[id^=gcontent_attribute_]").length;
+            return blocksCount > 0 &&
+                confirm("<?php echo $this->__('Current Mapping will be reloaded. Continue?') ?>") ||
+                blocksCount == 0;
+        }
+    }
+}();
+
+ Event.observe(window, 'load', function(){
+     if ($("select_attribute_set")) {
+         Event.observe($("select_attribute_set"), 'change', itemType.updateAttributes);
+     }
+     if ($("select_target_country")) {
+         Event.observe($("select_target_country"), 'change', itemType.reloadItemTypes);
+     }
+});
+//]]>
+</script>
