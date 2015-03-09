@@ -12,6 +12,7 @@ Create a project in Google developers console
 
 Login to Google developers console or create an account
 Create a Project
+
 Name: Magento-GoogleShoppingApi
 Project-ID: use the generated id or something like magento-gshopping-841
 After the project is created go to "APIs & auth" -> "APIs"
