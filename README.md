@@ -13,7 +13,7 @@ Magento Extension Directory
 
 5> Idealo Product Export :- Idealo product is a magento extension and this extension will provide a backend utility to export your store product for use in idealo.
 
-6> Magento Google Shopping Api V2 :- This Extension provide a Google Shopping Api V2 interface in magento feb, 1025 the V1 has expired so this is the V2 Extension.
+6> Magento Google Shopping Api V2 :- This Extension provide a Google Shopping Api V2 interface in magento feb, 2015 the V1 has expired so this is the V2 Extension.
 
 More comming soon.....
 
