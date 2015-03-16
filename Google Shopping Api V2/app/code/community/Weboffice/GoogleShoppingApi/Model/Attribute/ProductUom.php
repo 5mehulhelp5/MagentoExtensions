@@ -13,7 +13,7 @@
  * @package    Weboffice_GoogleShoppingApi
  * @author      Weboffice UG (haftungsbeschränkt) <magedev@Weboffice.eu>
  */
-class Weboffice_GoogleShoppingApi_Model_Attribute_ProductUom extends Mage_GoogleShopping_Model_Attribute_Default
+class Weboffice_GoogleShoppingApi_Model_Attribute_ProductUom extends Weboffice_GoogleShoppingApi_Model_Attribute_Default
 {
     /**
      * Set current attribute to entry (for specified product)

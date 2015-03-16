@@ -26,7 +26,7 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Id extends Weboffice_GoogleSho
      */
     public function convertAttribute($product, $shoppingProduct)
     {
-        echo $value = Mage::helper('googleshoppingapi')->buildContentProductId($product->getId(), $product->getStoreId());
+        $value = Mage::helper('googleshoppingapi')->buildContentProductId($product->getId(), $product->getStoreId());
         return $shoppingProduct->setOfferId($value);
     }
 }
