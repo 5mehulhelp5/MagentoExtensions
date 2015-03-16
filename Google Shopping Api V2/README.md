@@ -33,7 +33,7 @@ Create a project in Google developers console
 <li>In the next step the shop backend data has to be enterend
 
 <ul class="task-list">
-<li>"Authorized JavaScript origins": <a href="https://www.yourmagento.com/">https://www.yourmagentobackend.com/</a>
+<li>"Authorized JavaScript origins": <a href="https://www.yourmagento.com/">https://www.yourmagento.com/</a>
 </li>
 <li>"Authorized redirect uris":</li>
 <li><a href="https://www.yourmagento.com/index.php/admin/googleShoppingApi_oauth/auth/">https://www.yourmagento.com/index.php/admin/googleShoppingApi_oauth/auth/</a></li>
