@@ -37,6 +37,7 @@ Create a project in Google developers console
 </li>
 <li>"Authorized redirect uris":</li>
 <li><a href="https://www.yourmagento.com/index.php/admin/googleShoppingApi_oauth/auth/">https://www.yourmagento.com/index.php/admin/googleShoppingApi_oauth/auth/</a></li>
+<li> Or if some one has changed his admin url then please use that <b>Your site admin url /googleShoppingApi_oauth/auth/</b>
 </ul>
 </li>
 <li>After finishing the process you can see your API credentials
