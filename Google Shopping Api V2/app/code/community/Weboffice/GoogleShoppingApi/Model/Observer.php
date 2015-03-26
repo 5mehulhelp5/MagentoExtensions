@@ -74,12 +74,24 @@ class Weboffice_GoogleShoppingApi_Model_Observer
         if ($product->getStoreId()) {
             $items->addStoreFilter($product->getStoreId());
         }
-
+        $clientAuthenticated = true;
         foreach ($items as $item) {
             if (!Mage::getStoreConfigFlag('bvt_googleshoppingapi_config/settings/observed', $item->getStoreId())) {
                 $items->removeItemByKey($item->getId());
-            }
-        }
+            }else {
+				$service = Mage::getModel('googleshoppingapi/googleShopping');
+				if(!$service->isAuthenticated($item->getStoreId())) {
+					$items->removeItemByKey($item->getId());
+					$clientAuthenticated =false;
+				}
+			}
+			
+		}
+		if(!$clientAuthenticated) {
+			Mage::getSingleton('adminhtml/session')->addWarning(
+				Mage::helper('googleshoppingapi')->__('Product was not updated on GoogleShopping for at least one store. Please authenticate and save the product again or update manually.')
+			); 
+		}
 
         return $items;
     }
