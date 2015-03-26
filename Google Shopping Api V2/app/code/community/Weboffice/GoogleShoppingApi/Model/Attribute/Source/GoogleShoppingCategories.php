@@ -44,7 +44,7 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
                     $line++;
                     $this->_options[] = array(
                         'value' => $line,
-                        'label' => $line ." ". $category
+                        'label' => $line ." ". trim($category)
                     );
                 }
             }
