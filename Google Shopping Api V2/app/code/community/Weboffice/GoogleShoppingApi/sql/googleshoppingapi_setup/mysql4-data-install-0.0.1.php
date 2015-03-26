@@ -19,12 +19,11 @@
 /** @var $installer Mage_Core_Model_Resource_Setup */
 
 $installer = $this;
-
-if (Mage::helper('googleshoppingapi')->isModuleEnabled('Mage_GoogleShopping')) {
+if (Mage::helper('googleshopping')->isModuleEnabled('Mage_GoogleShopping')) {
     $typesInsert = $installer->getConnection()
         ->select()
         ->from(
-            $installer->getTable('googleshoppingapi/types'),
+            $installer->getTable('googleshopping/types'),
             array(
                 'type_id',
                 'attribute_set_id',
@@ -32,11 +31,10 @@ if (Mage::helper('googleshoppingapi')->isModuleEnabled('Mage_GoogleShopping')) {
             )
         )
         ->insertFromSelect($installer->getTable('googleshoppingapi/types'));
-
     $itemsInsert = $installer->getConnection()
         ->select()
         ->from(
-            $installer->getTable('googleshoppingapi/items'),
+            $installer->getTable('googleshopping/items'),
             array(
                 'item_id',
                 'type_id',
@@ -48,7 +46,6 @@ if (Mage::helper('googleshoppingapi')->isModuleEnabled('Mage_GoogleShopping')) {
             )
         )
         ->insertFromSelect($installer->getTable('googleshoppingapi/items'));
-
     $attributes = '';
     foreach (Mage::getModel('googleshoppingapi/config')->getAttributes() as $destAttribtues) {
         foreach ($destAttribtues as $code => $info) {
@@ -59,7 +56,7 @@ if (Mage::helper('googleshoppingapi')->isModuleEnabled('Mage_GoogleShopping')) {
     $attributesInsert = $installer->getConnection()
         ->select()
         ->from(
-            $installer->getTable('googleshoppingapi/attributes'),
+            $installer->getTable('googleshopping/attributes'),
             array(
                 'id',
                 'attribute_id',
@@ -68,7 +65,6 @@ if (Mage::helper('googleshoppingapi')->isModuleEnabled('Mage_GoogleShopping')) {
             )
         )
         ->insertFromSelect($installer->getTable('googleshoppingapi/attributes'));
-
     $installer->run($typesInsert);
     $installer->run($attributesInsert);
     $installer->run($itemsInsert);
