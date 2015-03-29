@@ -38,6 +38,10 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Link extends Weboffice_GoogleS
                 }
             }
             
+            if(strpos($url, "?") !== true) {
+                $url .= "?";
+            }
+            
             $shoppingProduct->setLink($url.'&utm_source=GoogleShopping');
         }
 
