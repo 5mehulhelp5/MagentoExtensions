@@ -38,13 +38,17 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Link extends Weboffice_GoogleS
                 }
             }
             
-            if(strpos($url, "?") !== true) {
-                $url .= "?";
-            }
+            $config = Mage::getSingleton('googleshoppingapi/config');
+			if( $config->getAddUtmSrcGshopping($product->getStoreId()) ) {
+				$url .= '&utm_source=GoogleShopping';
+			}
+			if( $customUrlParameters = 
+					$config->getCustomUrlParameters($product->getStoreId()) ) {
+				$url .= $customUrlParameters;
+			}
             
-            $shoppingProduct->setLink($url.'&utm_source=GoogleShopping');
+            $shoppingProduct->setLink($url);
         }
-
         return $shoppingProduct;
     }
 }
