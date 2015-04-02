@@ -44,8 +44,9 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
         $type = $this->getGcontentAttributeType($productAttribute);
         $value = $this->getProductAttributeValue($product);
 
-        if (!is_null($value)) {
-            $shoppingProduct->offsetSet($this->getName(),$value);
+         if (!is_null($value)) {
+			$name = Google_Utils::camelCase($this->getName());
+            $shoppingProduct->offsetSet($name,$value);
         }
         return $shoppingProduct;
     }
