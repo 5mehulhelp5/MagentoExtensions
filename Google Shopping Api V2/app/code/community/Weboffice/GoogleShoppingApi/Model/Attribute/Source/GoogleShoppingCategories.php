@@ -27,7 +27,6 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
     public function getAllOptions()
     {
         $taxonomyPath = Mage::getBaseDir() . self::TAXONOMY_FILE_PATH;
-
         $lang = Mage::getStoreConfig('general/locale/code',Mage::app()->getRequest()->getParam('store', 0));
         $taxonomyFile = $taxonomyPath . "taxonomy.".$lang.".txt";
         
@@ -36,6 +35,12 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
         }
         
         if (is_null($this->_options)) {
+        
+			$this->_options[0] = array(
+				'value' => 1,
+				'label' => "1 Other"
+			);
+        
             if(($fh = fopen($taxonomyFile,"r")) !== false) {
                 $line = 0;
                 $this->_options = array();
@@ -44,11 +49,12 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
                     $line++;
                     $this->_options[] = array(
                         'value' => $line,
-                        'label' => $line ." ". trim($category)
+                        'label' => $line ." ". $category
                     );
                 }
             }
         }
+        
         return $this->_options;
     }
 }
