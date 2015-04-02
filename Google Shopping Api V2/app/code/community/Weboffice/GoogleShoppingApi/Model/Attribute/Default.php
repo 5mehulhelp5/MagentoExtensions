@@ -17,7 +17,7 @@
  */
 class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_GoogleShoppingApi_Model_Attribute
 {
-    /**
+     /**
      * Google Content attribute types
      *
      * @var string
@@ -26,7 +26,6 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
     const ATTRIBUTE_TYPE_INT     = 'int';
     const ATTRIBUTE_TYPE_FLOAT   = 'float';
     const ATTRIBUTE_TYPE_URL     = 'url';
-
     /**
      * Set current attribute to entry (for specified product)
      *
@@ -43,14 +42,13 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
             ->getProductAttribute($product, $this->getAttributeId());
         $type = $this->getGcontentAttributeType($productAttribute);
         $value = $this->getProductAttributeValue($product);
-
-         if (!is_null($value)) {
+        if (!is_null($value)) {
 			$name = Google_Utils::camelCase($this->getName());
             $shoppingProduct->offsetSet($name,$value);
         }
+        
         return $shoppingProduct;
     }
-
     /**
      * Get current attribute value for specified product
      *
@@ -62,13 +60,11 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
         if (is_null($this->getAttributeId())) {
             return null;
         }
-
         $productAttribute = Mage::helper('googleshoppingapi/product')
             ->getProductAttribute($product, $this->getAttributeId());
         if (is_null($productAttribute)) {
             return null;
         }
-
         if ($productAttribute->getFrontendInput() == 'date' ||
             $productAttribute->getBackendType() == 'date') {
                 $value = $product->getData($productAttribute->getAttributeCode());
@@ -82,7 +78,6 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
         }
         return $value;
     }
-
     /**
      * Return Google Content Attribute Type By Product Attribute
      *
@@ -103,5 +98,4 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Default extends Weboffice_Goog
             return self::ATTRIBUTE_TYPE_TEXT;
         }
     }
-
 }
