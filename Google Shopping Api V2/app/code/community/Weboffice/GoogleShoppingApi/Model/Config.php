@@ -105,7 +105,28 @@ class Weboffice_GoogleShoppingApi_Model_Config extends Varien_Object
     {
         return $this->getConfigData('target_country', $storeId);
     }
-
+    
+    /**
+     * Add utm_source=GoogleShopping as url parameter
+     *
+     * @param int $storeId
+     * @return 
+     */
+    public function getAddUtmSrcGshopping($storeId = null)
+    {
+        return $this->getConfigData('utmsource_gshopping', $storeId);
+    }
+    
+    /**
+     * Customer URL parameters for product link
+     *
+     * @param int $storeId
+     * @return string
+     */
+    public function getCustomUrlParameters($storeId = null)
+    {
+        return $this->getConfigData('customer_url_parameters', $storeId);
+    }
     /**
      * Google Account target currency (for target country)
      *
