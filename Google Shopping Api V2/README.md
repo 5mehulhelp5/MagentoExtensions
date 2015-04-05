@@ -1,5 +1,8 @@
 This is a read me file
 
+Right now on this extension offline work is going so if need the latest version please contact me Thanks
+=======================================================================================================================
+
 This extension is a magento extension and this extension will provide a Backend utility to Connect your Google Merchant Account to magento Shop.
 
 
