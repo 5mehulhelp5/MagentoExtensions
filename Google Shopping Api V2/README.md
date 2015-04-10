@@ -15,7 +15,7 @@ Create a project in Google developers console
 ------------------------------------------------
 
 <ul class="task-list">
-<li>Login to Google developers console or create an account</li>
+<li>Login to Google developers console or create an account <a href="https://console.developers.google.com" target="_blank">https://console.developers.google.com</a></li>
 <li>Create a Project
 
 <ul class="task-list">
