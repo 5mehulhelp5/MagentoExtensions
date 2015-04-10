@@ -64,7 +64,6 @@ BlueVisionTec Modules -&gt; GoogleShoppingApi</p>
 <li>Google Developer Project Client Secret: The Client Secret generated above</li>
 <li>Target Country: The country for which you want to upload your products</li>
 <li>Update Google Shopping Item when Product is Updated</li>
-<li>Not implemented (observer disabled in current version, will be readded)</li>
 <li>Renew not listed items</li>
 <li>When syncing a product which is not listed on GoogleShopping, it will be added</li>
 <li>Remove disabled items</li>
