@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Weboffice_GoogleShoppingApi>
-      <version>0.0.4</version>
+      <version>0.0.9</version>
   </Weboffice_GoogleShoppingApi>
   </modules>
   
@@ -25,6 +25,9 @@
               <attributes>
                   <table>googleshoppingapi_attributes</table>
               </attributes>
+			  <taxonomies>
+                  <table>googleshoppingapi_taxonomies</table>
+              </taxonomies>
           </entities>
       </googleshoppingapi_resource>
     </models>
@@ -150,7 +153,7 @@
         <!-- Available target countries. Each country must have
         language code (ISO 639-1) and currency code (ISO 3166)
         according to Google Content documentation. -->
-        <allowed_countries>
+         <allowed_countries>
             <AT translate="name currency_name">
                 <name>Austria</name>
                 <language>de</language>
@@ -228,7 +231,7 @@
                 <currency>GBP</currency>
                 <currency_name>British Pound Sterling</currency_name>
             </GB>
-            <PL translate="name currency_name">
+			<PL translate="name currency_name">
                 <name>Poland</name>
                 <language>pl</language>
                 <locale>pl_PL</locale>

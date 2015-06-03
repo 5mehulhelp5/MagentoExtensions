@@ -171,7 +171,7 @@ class Weboffice_GoogleShoppingApi_Model_MassOperations
             return $this;
         }
 
-        $this->_getNotifier()->addSuccess(
+        $this->_getNotifier()->addNotice(
             Mage::helper('googleshoppingapi')->__('Product synchronization with Google Shopping completed'),
             Mage::helper('googleshoppingapi')->__('Total of %d items(s) have been deleted; total of %d items(s) have been updated.', $totalDeleted, $totalUpdated)
         );
@@ -210,19 +210,8 @@ class Weboffice_GoogleShoppingApi_Model_MassOperations
                     // The item was removed successfully
                     $totalDeleted++;
                 } catch (Exception $e) {
-                    if($e->getCode() == 404){
-						$item->delete();
-						$this->_getNotifier()->addNotice(
-							Mage::helper('googleshoppingapi')->__(
-								'The item "%s" was not found on GoogleContent',
-								$item->getProduct()->getName()
-							)
-						);
-						$totalDeleted++;
-                    } else {
-						Mage::logException($e);
-						$errors[] = Mage::helper('googleshoppingapi')->__('The item "%s" hasn\'t been deleted.', $item->getProduct()->getName());
-                    }
+                    Mage::logException($e);
+                    $errors[] = Mage::helper('googleshoppingapi')->__('The item "%s" hasn\'t been deleted.', $item->getProduct()->getName());
                 }
             }
         } else {

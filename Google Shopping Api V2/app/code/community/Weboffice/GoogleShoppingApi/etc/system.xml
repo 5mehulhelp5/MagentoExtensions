@@ -120,7 +120,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                 </commerce_search>
-                <url_parameters translate="label">
+				<url_parameters translate="label">
                     <label>URL parameters</label>
                     <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
                     <sort_order>200</sort_order>

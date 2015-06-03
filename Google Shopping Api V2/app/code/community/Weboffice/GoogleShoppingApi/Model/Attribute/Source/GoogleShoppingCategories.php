@@ -18,7 +18,7 @@
 class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategories extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
 {
     const TAXONOMY_FILE_PATH = "/var/weboffice/googleshoppingapi/data/";
-	
+	public $_optionsdata = array();
     /**
      * Retrieve all options array
      *
@@ -27,6 +27,7 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
     public function getAllOptions()
     {
         $taxonomyPath = Mage::getBaseDir() . self::TAXONOMY_FILE_PATH;
+
         $lang = Mage::getStoreConfig('general/locale/code',Mage::app()->getRequest()->getParam('store', 0));
         $taxonomyFile = $taxonomyPath . "taxonomy.".$lang.".txt";
         
@@ -35,12 +36,6 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
         }
         
         if (is_null($this->_options)) {
-        
-			$this->_options[0] = array(
-				'value' => 1,
-				'label' => "1 Other"
-			);
-        
             if(($fh = fopen($taxonomyFile,"r")) !== false) {
                 $line = 0;
                 $this->_options = array();
@@ -49,12 +44,36 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Source_GoogleShoppingCategorie
                     $line++;
                     $this->_options[] = array(
                         'value' => $line,
-                        'label' => $line ." ". $category
+                        'label' => $line ." ". trim($category)
                     );
                 }
             }
         }
-        
         return $this->_options;
+    }
+	
+	public function getDataDetail()
+    {
+        $taxonomyPath = Mage::getBaseDir() . self::TAXONOMY_FILE_PATH;
+        
+        //$lang = Mage::getStoreConfig('general/locale/code',Mage::app()->getRequest()->getParam('store', 0));
+		$langs = array('en_US','de_DE');
+		if (is_null($this->_optionsdata) || count($this->_optionsdata) < 1) {
+		     foreach($langs as $lang){
+					   $taxonomyFile = $taxonomyPath . "taxonomy.".$lang.".txt";
+				
+					
+						if(($fh = fopen($taxonomyFile,"r")) !== false) {
+							$line = 0;
+							//$this->_optionsdata = array();
+							while (($category = fgets($fh)) !== false) {
+								if($line === 0) {$line++;continue;} // skip first line
+								$line++;
+								$this->_optionsdata[$lang][] = trim($category);
+							}
+						}
+					}
+		}
+        return $this->_optionsdata;
     }
 }

@@ -19,11 +19,8 @@
 /** @var $installer Mage_Core_Model_Resource_Setup */
 
 $installer = $this;
-
 $installer->startSetup();
-
 $connection = $installer->getConnection();
-
 $table = $connection->newTable($this->getTable('googleshoppingapi/types'))
     ->addColumn('type_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'identity'  => true,
@@ -60,7 +57,6 @@ $table = $connection->newTable($this->getTable('googleshoppingapi/types'))
         array('type' => Varien_Db_Adapter_Interface::INDEX_TYPE_UNIQUE))
     ->setComment('Google Content Item Types link Attribute Sets');
 $installer->getConnection()->createTable($table);
-
 $table = $connection->newTable($this->getTable('googleshoppingapi/items'))
     ->addColumn('item_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'identity'  => true,
@@ -114,7 +110,6 @@ $table = $connection->newTable($this->getTable('googleshoppingapi/items'))
          array('product_id', 'store_id'))
     ->setComment('Google Content Items Products');
 $installer->getConnection()->createTable($table);
-
 $table = $connection->newTable($this->getTable('googleshoppingapi/attributes'))
     ->addColumn('id', Varien_Db_Ddl_Table::TYPE_INTEGER, 10, array(
         'identity'  => true,
@@ -159,7 +154,6 @@ $table = $connection->newTable($this->getTable('googleshoppingapi/attributes'))
      )
      ->setComment('Google Content Attributes link Product Attributes');
 $installer->getConnection()->createTable($table);
-
 $catalogEavSetup = Mage::getResourceModel('catalog/eav_mysql4_setup','core_setup');
 $attrGoogleShoppingImage = $catalogEavSetup->getAttributeId(Mage_Catalog_Model_Product::ENTITY, 'google_shopping_image');
 if($attrGoogleShoppingImage === false) {
@@ -195,4 +189,3 @@ $catalogEavSetup->addAttribute('catalog_product','google_shopping_category',
     )
 );
 $installer->endSetup();
-
