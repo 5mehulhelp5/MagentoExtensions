@@ -17,8 +17,10 @@
 		<resourceModel>shippingcart_mysql4</resourceModel>
 	  </shippingcart>
 	</models>
+  </global>
+  <frontend>
     <events>
-	  <sales_quote_collect_totals_before> <!-- identifier of the event we want to catch -->
+	  <sales_quote_collect_totals_after> <!-- identifier of the event we want to catch -->
         <observers>
           <sales_quote_collect_totals_before_handler> <!-- identifier of the event handler -->
             <type>model</type> <!-- class method call type; valid are model, object and singleton -->
@@ -27,7 +29,7 @@
             <args></args> <!-- additional arguments passed to observer -->
           </sales_quote_collect_totals_before_handler>
         </observers>
-      </sales_quote_collect_totals_before>
+      </sales_quote_collect_totals_after>
     </events>
-  </global>
+  </frontend>
 </config> 
