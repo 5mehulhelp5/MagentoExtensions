@@ -26,8 +26,18 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Size extends Weboffice_GoogleS
      */
     public function convertAttribute($product, $shoppingProduct)
     {
-        $value = $this->getProductAttributeValue($product);
-	    $sizes = explode(",",$value); $sizes = array_map('trim',$sizes);
+	    $sizes = array();
+		
+		if($product->getTypeId() == "configurable") {
+			$associatedProducts = $product->getTypeInstance(true)->getAssociatedProducts($product);
+			foreach($associatedProducts as $item) {
+				$sizes[] = $this->getProductAttributeValue($item);
+			}
+		} else {
+			$value = $this->getProductAttributeValue($product);
+	        $sizes = explode(",",$value); $sizes = array_map('trim',$sizes);
+		}
+		
         return $shoppingProduct->setSizes($sizes);
     }
 }
