@@ -39,6 +39,27 @@ class Weboffice_GoogleShoppingApi_Model_Config extends Varien_Object
         }
         return $this->_config[$key][$storeId];
     }
+	
+    /**
+     * Use service account
+     *
+     * @param int $storeId
+     * @return bool
+     */
+    public function getUseServiceAccount($storeId = null) {
+        return $this->getConfigData('use_service_account', $storeId);
+    }
+	
+	/**
+     * Google Account ID
+     *
+     * @param int $storeId
+     * @return string
+     */
+    public function getPrivateKeyPassword($storeId = null)
+    {
+        return Mage::helper('core')->decrypt($this->getConfigData('private_key_password', $storeId));
+    }
 
     /**
      * Google Account ID
@@ -117,7 +138,28 @@ class Weboffice_GoogleShoppingApi_Model_Config extends Varien_Object
         $country = $this->getTargetCountry($storeId);
         return $this->getCountryInfo($country, 'currency');
     }
-
+    
+	/**
+     * Add utm_source=GoogleShopping as url parameter
+     *
+     * @param int $storeId
+     * @return 
+     */
+    public function getAddUtmSrcGshopping($storeId = null)
+    {
+        return $this->getConfigData('utmsource_gshopping', $storeId);
+    }
+    
+    /**
+     * Customer URL parameters for product link
+     *
+     * @param int $storeId
+     * @return string
+     */
+    public function getCustomUrlParameters($storeId = null)
+    {
+        return $this->getConfigData('custom_url_parameters', $storeId);
+    }
     /**
      * Google Content destinations info
      *
