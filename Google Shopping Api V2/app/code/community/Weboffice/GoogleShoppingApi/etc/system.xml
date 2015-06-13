@@ -140,7 +140,7 @@
 				<custom_url_parameters translate="label"> 
                     <label>Custom URL parameters</label>
                     <frontend_type>text</frontend_type>
-					<comment><![CDATA[e.g. [AMP]param=value[AMP]param2=value2]]></comment>
+					<comment><![CDATA[e.g. &param=value&param2=value2]]></comment>
                     <sort_order>202</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
