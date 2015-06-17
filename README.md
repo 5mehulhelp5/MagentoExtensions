@@ -15,13 +15,15 @@ Magento Extension Directory
 
 6> Magento Google Shopping Api V2 :- This Extension provide a Google Shopping Api V2 interface in magento feb, 2015 the V1 has expired so this is the V2 Extension.
 
+7> Magento Guest checkout :- This extension is a magento extension and this extension will provide a frontend utility to Stop guest user to see your cart and checkout so without login customer can not buy..
+
 More comming soon.....
 
 
 My Self
 =================
 
-I have a really Good experience in PHP development. i have been in this development field from last 3 years.
+I have a really Good experience in PHP development. i have been in this development field from last 3.5 years.
 
 Skills
 ----------
