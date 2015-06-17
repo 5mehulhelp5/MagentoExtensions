@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<mehulchaudhari translate="label" module="guestcheckout">
+            <label>MehulChaudhari</label>
+            <sort_order>200</sort_order>
+        </mehulchaudhari>
+	  </tabs>
+	  <sections>
+		<guestcheckout  translate="label" module="guestcheckout">                    
+		<label>GuestCheckout</label>
+		<tab>mehulchaudhari</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>10</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <settings translate="label"> 
+					  <label>General Setting</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>10</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </enable>
+						  <msg translate="label">
+                            <label>Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                          </msg>
+					   </fields>
+					   </settings>
+					</groups>
+		</guestcheckout>
+	  </sections>
+</config>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MehulChaudhari_GuestCheckout>
+      <version>0.1.0</version>
+    </MehulChaudhari_GuestCheckout>
+  </modules>
+  <global>
+    <helpers>
+      <guestcheckout>
+        <class>MehulChaudhari_GuestCheckout_Helper</class>
+      </guestcheckout>
+    </helpers>
+	<models>
+	  <guestcheckout>
+		<class>MehulChaudhari_GuestCheckout_Model</class>
+		<resourceModel>guestcheckout_mysql4</resourceModel>
+	  </guestcheckout>
+	</models>
+    <events>
+	  <controller_action_predispatch_checkout_cart_index> <!-- identifier of the event we want to catch -->
+        <observers>
+          <controller_action_predispatch_checkout_cart_index_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>guestcheckout/observer</class> <!-- observers class alias -->
+            <method>checkLogin</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </controller_action_predispatch_checkout_cart_index_handler>
+        </observers>
+      </controller_action_predispatch_checkout_cart_index>
+	  <controller_action_predispatch_checkout_onepage_index> <!-- identifier of the event we want to catch -->
+        <observers>
+          <controller_action_predispatch_checkout_onepage_index_handler> <!-- identifier of the event handler -->
+            <type>model</type> <!-- class method call type; valid are model, object and singleton -->
+            <class>guestcheckout/observer</class> <!-- observers class alias -->
+            <method>checkLogin</method>  <!-- observer's method to be called -->
+            <args></args> <!-- additional arguments passed to observer -->
+          </controller_action_predispatch_checkout_onepage_index_handler>
+        </observers>
+      </controller_action_predispatch_checkout_onepage_index>
+    </events>
+  </global>
+</config> 
