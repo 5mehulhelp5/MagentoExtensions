@@ -9,7 +9,7 @@ class MehulChaudhari_GuestCheckout_Model_Observer
 				if($enable){
 				        if(!Mage::getSingleton('customer/session')->isLoggedIn()){
 						            $returnUrl = Mage::helper('customer')->getLoginUrl();
-									Mage::getSingleton('core/session')->addError($msg);
+									Mage::getSingleton('core/session')->addNotice($msg);
 						            Mage::app()->getResponse()->setRedirect($returnUrl)->sendResponse();
 									exit;
 						}
