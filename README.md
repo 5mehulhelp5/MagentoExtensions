@@ -17,6 +17,8 @@ Magento Extension Directory
 
 7> Magento Guest checkout :- This extension is a magento extension and this extension will provide a frontend utility to Stop guest user to see your cart and checkout so without login customer can not buy..
 
+8> Mageto Configurable Product Option Order Fix:- This extension is a magento extension and this extension will provide a magento frontend utility to arrange a Configurable product option based on their admin position setting.
+
 More comming soon.....
 
 

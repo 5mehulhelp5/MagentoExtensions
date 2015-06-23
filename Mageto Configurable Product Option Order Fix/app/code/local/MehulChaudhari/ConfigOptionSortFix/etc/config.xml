@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MehulChaudhari_ConfigOptionSortFix>
+      <version>0.1.0</version>
+    </MehulChaudhari_ConfigOptionSortFix>
+  </modules>
+  <global>
+    <helpers>
+      <configoptionsortfix>
+        <class>MehulChaudhari_ConfigOptionSortFix_Helper</class>
+      </configoptionsortfix>
+    </helpers>
+	<blocks>
+	  <configoptionsortfix>
+		<class>MehulChaudhari_ConfigOptionSortFix_Block</class>
+	  </configoptionsortfix>
+			<catalog>
+				<rewrite>
+					<product_view_type_configurable>MehulChaudhari_ConfigOptionSortFix_Block_Catalog_Product_View_Type_Configurable</product_view_type_configurable>
+				</rewrite>
+			</catalog>
+	</blocks>
+  </global>
+</config> 
