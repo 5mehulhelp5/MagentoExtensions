@@ -5,9 +5,9 @@ This extension is a magento extension and this extension will provide a magento 
 so when you install this extension it will provide a functionality to add one more description field in magento attribute create from so you can write a description for that particular attribute and display that in fronted.
 
 <b>
-To get Description for any attribute in fronted you can use this code.
-$attribute = $_product->getResource()->getAttribute('manufacturer');
-echo $attribute->getDescription();
+To get Description for any attribute in fronted you can use this code.<br/>
+$attribute = $_product->getResource()->getAttribute('manufacturer');<br/>
+echo $attribute->getDescription();<br/>
 Here "manufacturer" is a attribute code so you can write your attribute code.
 </b>
 
