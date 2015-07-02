@@ -19,6 +19,9 @@ Magento Extension Directory
 
 8> Magento Configurable Product Option Order Fix:- This extension is a magento extension and this extension will provide a magento frontend utility to arrange a Configurable product option based on their admin position setting.
 
+9>Magento Product Attribute Description:- This extension is a magento extension and this extension will provide a magento Backend utility to provide attribute description with editor.
+so when you install this extension it will provide a functionality to add one more description field in magento attribute create from so you can write a description for that particular attribute and display that in fronted.
+
 More comming soon.....
 
 
