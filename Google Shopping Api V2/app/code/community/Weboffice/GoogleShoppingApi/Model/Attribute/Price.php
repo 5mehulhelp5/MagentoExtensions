@@ -38,7 +38,12 @@ class Weboffice_GoogleShoppingApi_Model_Attribute_Price extends Weboffice_Google
         // get tax settings
         $taxHelp = Mage::helper('tax');
         $priceDisplayType = $taxHelp->getPriceDisplayType($product->getStoreId());
-        $inclTax = ($priceDisplayType == Mage_Tax_Model_Config::DISPLAY_TYPE_INCLUDING_TAX);
+        //$inclTax = ($priceDisplayType == Mage_Tax_Model_Config::DISPLAY_TYPE_INCLUDING_TAX);
+		
+		$inclTax = (
+					$priceDisplayType == Mage_Tax_Model_Config::DISPLAY_TYPE_INCLUDING_TAX
+					|| $priceDisplayType == Mage_Tax_Model_Config::DISPLAY_TYPE_BOTH
+				);
 
         // calculate sale_price attribute value
         $salePriceAttribute = $this->getGroupAttributeSalePrice();
