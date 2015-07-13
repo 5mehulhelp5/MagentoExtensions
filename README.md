@@ -45,9 +45,9 @@ Freelancing Job Profile:-
 <br/>
 <a href="http://mehulchaudhari.elance.com" target="_blank">Fore More Detail</a>
 <br/>
-2>Odesk
+2>Upwork
 <br/>
-<a href="https://www.odesk.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
+<a href="https://www.upwork.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
 <br/>
 
 Thanks 
