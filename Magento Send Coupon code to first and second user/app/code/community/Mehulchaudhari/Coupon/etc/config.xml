@@ -18,7 +18,7 @@
 	  </coupon>
 	</models>
     <events>
-	  <sales_model_service_quote_submit_after> <!-- identifier of the event we want to catch -->
+	  <sales_order_shipment_save_after> <!-- identifier of the event we want to catch -->
         <observers>
           <sales_model_service_quote_submit_after_handler> <!-- identifier of the event handler -->
             <type>model</type> <!-- class method call type; valid are model, object and singleton -->
@@ -27,7 +27,7 @@
             <args></args> <!-- additional arguments passed to observer -->
           </sales_model_service_quote_submit_after_handler>
         </observers>
-      </sales_model_service_quote_submit_after>
+      </sales_order_shipment_save_after>
     </events>
   </global>
 </config> 

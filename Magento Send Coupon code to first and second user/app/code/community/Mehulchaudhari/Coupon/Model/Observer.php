@@ -4,7 +4,9 @@ class Mehulchaudhari_Coupon_Model_Observer
 
 			public function sendEmail(Varien_Event_Observer $observer)
 			{
-               $order = $observer->getEvent()->getOrder();
+               //$order = $observer->getEvent()->getOrder();
+			   $shipment = $observer->getEvent()->getShipment();
+			   $order = $shipment->getOrder();
 			   $customerid = $order->getCustomerId();
 			   $customeremail = $order->getCustomerEmail();
 			   if($customerid != '' || $customerid != null){
