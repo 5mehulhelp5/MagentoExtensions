@@ -6,7 +6,11 @@ class Mehulchaudhari_Coupon_Model_Observer
 			{
                //$order = $observer->getEvent()->getOrder();
 			   $shipment = $observer->getEvent()->getShipment();
+			   $this->log('-------------------shipment-----------------');
+			   $this->log($shipment->getData());
 			   $order = $shipment->getOrder();
+			   $this->log('-------------------order-----------------');
+			   $this->log($order->getData());
 			   $customerid = $order->getCustomerId();
 			   $customeremail = $order->getCustomerEmail();
 			   if($customerid != '' || $customerid != null){
@@ -32,46 +36,60 @@ class Mehulchaudhari_Coupon_Model_Observer
 			
 			
 			public function sendFirstEmail($order){
-			    $email = $order->getCustomerEmail();
-			    $name = $order->getCustomerName();
-				$postObject = array('coupon_code'=>Mage::getStoreConfig('coupon/settings/firstusercode'),'customer_name'=>$name);
-				$mailTemplate = Mage::getModel('core/email_template');
-                $mailTemplate->setDesignConfig(array('area' => 'frontend'))
-                    ->sendTransactional(
-                        Mage::getStoreConfig('coupon/settings/firstuseremail'),
-                        Mage::getStoreConfig('coupon/settings/sender_email_identity'),
-                        $email,
-                        $name,
-                        array('data' => $postObject,'order' => $order)
-                    );
+			    $coupon_code = (string)Mage::getStoreConfig('coupon/settings/firstusercode');
+			    if($coupon_code != '' || $coupon_code != null){
+						$email = $order->getCustomerEmail();
+						$name = $order->getCustomerName();
+						$postObject = array('coupon_code'=>$coupon_code,'customer_name'=>$name);
+						$mailTemplate = Mage::getModel('core/email_template');
+						$mailTemplate->setDesignConfig(array('area' => 'frontend'))
+							->sendTransactional(
+								Mage::getStoreConfig('coupon/settings/firstuseremail'),
+								Mage::getStoreConfig('coupon/settings/sender_email_identity'),
+								$email,
+								$name,
+								array('data' => $postObject,'order' => $order)
+							);
+						$this->log('-------------------first-----------------');
+                        $this->log($mailTemplate->getData());
+						if (!$mailTemplate->getSentSuccess()) {
+							throw new Exception();
+						}
 
-                if (!$mailTemplate->getSentSuccess()) {
-                    throw new Exception();
-                }
-
-                $translate->setTranslateInline(true);
-				
+						$translate->setTranslateInline(true);
+				}		
+				return true;
 			}
 			
 			public function sendSecondEmail($order){
-			   $email = $order->getCustomerEmail();
-			   $name = $order->getCustomerName();
-			   $postObject = array('coupon_code'=>Mage::getStoreConfig('coupon/settings/secondusercode'),'customer_name'=>$name);
-			   $mailTemplate = Mage::getModel('core/email_template');
-                $mailTemplate->setDesignConfig(array('area' => 'frontend'))
-                    ->sendTransactional(
-                        Mage::getStoreConfig('coupon/settings/seconduseremail'),
-                        Mage::getStoreConfig('coupon/settings/sender_email_identity'),
-                        $email,
-                        $name,
-                        array('data' => $postObject,'order' => $order)
-                    );
+			    $coupon_code = (string)Mage::getStoreConfig('coupon/settings/secondusercode');
+			    if($coupon_code != '' || $coupon_code != null){
+				   $email = $order->getCustomerEmail();
+				   $name = $order->getCustomerName();
+				   $postObject = array('coupon_code'=>$coupon_code,'customer_name'=>$name);
+				   $mailTemplate = Mage::getModel('core/email_template');
+					$mailTemplate->setDesignConfig(array('area' => 'frontend'))
+						->sendTransactional(
+							Mage::getStoreConfig('coupon/settings/seconduseremail'),
+							Mage::getStoreConfig('coupon/settings/sender_email_identity'),
+							$email,
+							$name,
+							array('data' => $postObject,'order' => $order)
+						);
+                    $this->log($mailTemplate);
+					if (!$mailTemplate->getSentSuccess()) {
+						throw new Exception();
+					}
 
-                if (!$mailTemplate->getSentSuccess()) {
-                    throw new Exception();
-                }
-
-                $translate->setTranslateInline(true);
+					$translate->setTranslateInline(true);
+				}	
+				return true;
+			}
+			
+			
+			public function log($data){
+			   Mage::log($data, null, 'coupon.log');
+			   return true;
 			}
 		
 }
