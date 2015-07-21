@@ -22,6 +22,8 @@ Magento Extension Directory
 9>Magento Product Attribute Description:- This extension is a magento extension and this extension will provide a magento Backend utility to provide attribute description with editor.
 so when you install this extension it will provide a functionality to add one more description field in magento attribute create from so you can write a description for that particular attribute and display that in fronted.
 
+10>Magento Send Coupon code to first time and second time buyer:- This extension is a magento extension and this extension will provide a backend utility to set coupon code to send first and second time user a coupon code in magento.So when the user's order goes completed at that time that user get appropiate code via email.
+
 More comming soon.....
 
 
