@@ -1,0 +1,40 @@
+First User coupon
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td class="email-heading">
+                        <h1>Hello {{htmlescape var=$order.getCustomerName()}}, Thank you for your order from {{var store.getFrontendName()}}.</h1>
+                        <p>For your support you got this coupon <b>{{var coupon_code}}</b></p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{{template config_path="design/email/footer"}}
+
+
+Second User coupon
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td class="email-heading">
+                        <h1>Hello {{htmlescape var=$order.getCustomerName()}}, Thank you for your order from {{var store.getFrontendName()}}.</h1>
+                        <p>For your support you got this coupon <b>{{var coupon_code}}</b></p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+{{template config_path="design/email/footer"}}

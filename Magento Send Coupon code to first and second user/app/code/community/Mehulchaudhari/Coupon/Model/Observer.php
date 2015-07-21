@@ -40,7 +40,6 @@ class Mehulchaudhari_Coupon_Model_Observer
 			    if($coupon_code != '' || $coupon_code != null){
 						$email = $order->getCustomerEmail();
 						$name = $order->getCustomerName();
-						$postObject = array('coupon_code'=>$coupon_code,'customer_name'=>$name);
 						$mailTemplate = Mage::getModel('core/email_template');
 						$mailTemplate->setDesignConfig(array('area' => 'frontend'))
 							->sendTransactional(
@@ -48,15 +47,13 @@ class Mehulchaudhari_Coupon_Model_Observer
 								Mage::getStoreConfig('coupon/settings/sender_email_identity'),
 								$email,
 								$name,
-								array('data' => $postObject,'order' => $order)
+								array('coupon_code' => $coupon_code,'order' => $order)
 							);
 						$this->log('-------------------first-----------------');
                         $this->log($mailTemplate->getData());
 						if (!$mailTemplate->getSentSuccess()) {
 							throw new Exception();
 						}
-
-						$translate->setTranslateInline(true);
 				}		
 				return true;
 			}
@@ -66,7 +63,6 @@ class Mehulchaudhari_Coupon_Model_Observer
 			    if($coupon_code != '' || $coupon_code != null){
 				   $email = $order->getCustomerEmail();
 				   $name = $order->getCustomerName();
-				   $postObject = array('coupon_code'=>$coupon_code,'customer_name'=>$name);
 				   $mailTemplate = Mage::getModel('core/email_template');
 					$mailTemplate->setDesignConfig(array('area' => 'frontend'))
 						->sendTransactional(
@@ -74,14 +70,12 @@ class Mehulchaudhari_Coupon_Model_Observer
 							Mage::getStoreConfig('coupon/settings/sender_email_identity'),
 							$email,
 							$name,
-							array('data' => $postObject,'order' => $order)
+							array('coupon_code' => $coupon_code,'order' => $order)
 						);
                     $this->log($mailTemplate);
 					if (!$mailTemplate->getSentSuccess()) {
 						throw new Exception();
 					}
-
-					$translate->setTranslateInline(true);
 				}	
 				return true;
 			}
