@@ -14,9 +14,9 @@ class Mehulchaudhari_Coupon_Model_Observer
 			   $customerid = $order->getCustomerId();
 			   $customeremail = $order->getCustomerEmail();
 			   if($customerid != '' || $customerid != null){
-			            $orders = Mage::getResourceModel('sales/order_collection')->addFieldToSelect('*')->addFieldToFilter('customer_id',$customerid);
+			            $orders = Mage::getResourceModel('sales/order_collection')->addFieldToSelect('*')->addFieldToFilter('customer_id',$customerid)->addFieldToFilter('status', 'complete');
 			   }else{
-			            $orders = Mage::getResourceModel('sales/order_collection')->addFieldToSelect('*')->addFieldToFilter('customer_email',$customeremail);   
+			            $orders = Mage::getResourceModel('sales/order_collection')->addFieldToSelect('*')->addFieldToFilter('customer_email',$customeremail)->addFieldToFilter('status', 'complete');   
 			   }
 			   
 			   $count = $orders->count();
