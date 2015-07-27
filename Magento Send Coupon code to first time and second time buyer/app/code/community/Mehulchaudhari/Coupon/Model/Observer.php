@@ -22,11 +22,11 @@ class Mehulchaudhari_Coupon_Model_Observer
 			   $count = $orders->count();
 			   switch($count){
 			        
-					case 1:
+					case 0:
 					    $this->sendFirstEmail($order);
 					break;
 					
-					case 2:
+					case 1:
 					    $this->sendSecondEmail($order);
 					break;
 			         
