@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <WebDevlopers_ProductPageShipping>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Catalog />
+                <Mage_Shipping />
+            </depends>
+        </WebDevlopers_ProductPageShipping>
+    </modules>
+</config>

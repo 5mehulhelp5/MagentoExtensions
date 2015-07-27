@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <WebDevlopers_ProductPageShipping>
+            <version>0.1.0</version>
+        </WebDevlopers_ProductPageShipping>
+    </modules>
+    <global>
+        <models>
+            <webdevlopers_productpageshipping>
+                <class>WebDevlopers_ProductPageShipping_Model</class>
+            </webdevlopers_productpageshipping>
+        </models>
+        <blocks>
+            <webdevlopers_productpageshipping>
+                <class>WebDevlopers_ProductPageShipping_Block</class>
+            </webdevlopers_productpageshipping>
+        </blocks>
+        <helpers>
+            <webdevlopers_productpageshipping>
+                <class>WebDevlopers_ProductPageShipping_Helper</class>
+            </webdevlopers_productpageshipping>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <webdevlopers_productpageshipping>
+                <use>standard</use>
+                <args>
+                    <frontName>productpageshipping</frontName>
+                    <module>WebDevlopers_ProductPageShipping</module>
+                </args>
+            </webdevlopers_productpageshipping>
+        </routers>
+        <events>
+            <controller_action_layout_load_before>
+                <observers>
+                    <webdevlopers_productpageshipping>
+                        <type>singleton</type>
+                        <model>webdevlopers_productpageshipping/observer</model>
+                        <method>observeLayoutHandleInitialization</method>
+                    </webdevlopers_productpageshipping>
+                </observers>
+            </controller_action_layout_load_before>
+        </events>
+        <layout>
+            <updates>
+                <webdevlopers_productpageshipping>
+                    <file>productpageshipping.xml</file>
+                </webdevlopers_productpageshipping>
+            </updates>
+        </layout>
+    </frontend>
+    <webdevlopers>
+        <productshippingpage>
+            <controller_actions>
+                <catalog_product_view />
+            </controller_actions>
+        </productshippingpage>
+    </webdevlopers>
+    <default>
+        <webdevlopers_productpageshipping>
+            <settings>
+                <enabled>0</enabled>
+                <display_position>left</display_position>
+                <use_country>1</use_country>
+                <use_region>1</use_region>
+                <use_city>1</use_city>
+                <use_postcode>1</use_postcode>
+                <use_coupon_code>1</use_coupon_code>
+                <use_cart>1</use_cart>
+                <use_cart_default>0</use_cart_default>
+            </settings>
+			<message>
+			    <blocktitle>ESTIMATE SHIPPING</blocktitle>
+				<blockdec>Enter your destination to get a shipping estimate.</blockdec>
+				<shippingblocktitle>SHIPPING RATES</shippingblocktitle>
+				<result>There are no shipping method applied for your destination.</result>
+				<button>Get a Quote</button>
+			</message>
+        </webdevlopers_productpageshipping>
+    </default>
+</config>

@@ -1,0 +1,126 @@
+<?php if ($this->isEnabled()): ?>
+<div class="block block-shipping-estimate">
+    <div class="block-title">
+        <strong><span><?php echo Mage::helper('webdevlopers_productpageshipping')->getTitle(); ?></span></strong>
+    </div>
+    <div class="block-content">
+    <p class="block-subtitle"><?php echo Mage::helper('webdevlopers_productpageshipping')->getDes(); ?></p>
+    <ul class="shipping-estimation-form" id="shipping-estimation-form">
+        <?php if ($this->isFieldVisible('country')): ?>
+            <li class="item">
+                <label for="estimate_country" class="required"><em>*</em><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Country') ?></label>
+                <div class="input-box">
+                    <?php echo Mage::getBlockSingleton('directory/data')->getCountryHtmlSelect(
+                            ($this->getFieldValue('country') ? $this->getFieldValue('country') : $this->getConfig()->getDefaultCountry()),
+                            'estimate[country_id]',
+                            'estimate_country'
+                        );
+                    ?>
+                </div>
+            </li>
+        <?php else: ?>
+            <input type="hidden" id="estimate_country" name="estimate[country_id]" value="<?php echo $this->htmlEscape($this->getConfig()->getDefaultCountry())?>" />
+        <?php endif; ?>
+        <?php if ($this->isFieldVisible('region')): ?>
+            <li class="item">
+                <label for="estimate_region_id"<?php if ($this->isFieldRequired('region')):?> class="required" <?php endif;?>><?php if ($this->isFieldRequired('region')):?><em>*</em><?php endif;?><?php echo $this->__('State/Province') ?></label>
+                <div class="input-box">
+                    <select id="estimate_region_id" name="estimate[region_id]" title="<?php echo Mage::helper('webdevlopers_productpageshipping')->__('State/Province') ?>" style="display:none;"<?php echo ($this->isFieldRequired('region') ? ' class="validate-select"' : '') ?>>
+                        <option value=""><?php echo  Mage::helper('webdevlopers_productpageshipping')->__('Please select an option') ?></option>
+                    </select>
+                   <script type="text/javascript">
+                   //<![CDATA[
+                       $('estimate_region_id').setAttribute('defaultValue',  '<?php echo $this->jsQuoteEscape($this->getFieldValue('region_id')); ?>');
+                   //]]>
+                   </script>
+                   <input type="text" id="estimate_region" name="estimate[region]" value="<?php echo $this->htmlEscape($this->getFieldValue('region')) ?>"  title="<?php echo  Mage::helper('webdevlopers_productpageshipping')->__('State/Province') ?>" class="input-text" style="display:none;" />
+               </div>
+            </li>
+            <script type="text/javascript">
+            //<![CDATA[
+                new RegionUpdater('estimate_country', 'estimate_region', 'estimate_region_id', <?php echo $this->helper('directory')->getRegionJson() ?>);
+            //]]>
+            </script>
+        <?php endif; ?>
+        <?php if($this->isFieldVisible('city')): ?>
+            <li class="item">
+                <label for="city"<?php if ($this->isFieldRequired('city')):?> class="required" <?php endif;?>><?php if ($this->isFieldRequired('city')):?><em>*</em><?php endif;?><?php echo  Mage::helper('webdevlopers_productpageshipping')->__('City') ?></label>
+                <div class="input-box">
+                    <input class="input-text<?php if ($this->isFieldRequired('city')):?> required-entry<?php endif;?>" id="estimate_city" type="text" name="estimate[city]" value="<?php echo $this->htmlEscape($this->getFieldValue('city')) ?>" />
+                </div>
+            </li>
+        <?php endif; ?>
+        <?php if ($this->isFieldVisible('postcode')): ?>
+            <li class="item">
+                <label for="estimate_postcode"<?php if ($this->isFieldRequired('postcode')):?> class="required" <?php endif;?>><?php if ($this->isFieldRequired('postcode')):?><em>*</em><?php endif;?><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Zip/Postal Code') ?></label>
+                <div class="input-box">
+                    <input class="input-text validate-postcode<?php if ($this->isFieldRequired('postcode')):?> required-entry<?php endif;?>" type="text" id="estimate_postcode" name="estimate[postcode]" value="<?php echo $this->htmlEscape($this->getFieldValue('postcode')) ?>" />
+                </div>
+            </li>
+       <?php endif; ?>
+       <?php if ($this->isFieldVisible('coupon_code')): ?>
+            <li class="item">
+                <label for="estimate_coupon_code"<?php if ($this->isFieldRequired('coupon_code')):?> class="required" <?php endif;?>><?php if ($this->isFieldRequired('coupon_code')):?><em>*</em><?php endif;?><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Coupon Code') ?></label>
+                <div class="input-box">
+                    <input class="input-text <?php if ($this->isFieldRequired('coupon_code')):?> required-entry<?php endif;?>" type="text" id="estimate_coupon_code" name="estimate[coupon_code]" value="<?php echo $this->htmlEscape($this->getFieldValue('coupon_code')) ?>" />
+                </div>
+            </li>
+       <?php endif; ?>
+       <?php if ($this->isFieldVisible('cart')): ?>
+            <li class="item radio">
+                <label for="estimate_cart_yes"><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Include Cart Items') ?></label>
+                <div class="input-box">
+                    <input type="radio" id="estimate_cart_yes" name="estimate[cart]" value="1" <?php if ($this->useShoppingCart()): ?> checked="checked"<?php endif;?> /><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Yes') ?>
+                    <input type="radio" id="estimate_cart_no" name="estimate[cart]" value="0" <?php if (!$this->useShoppingCart()): ?> checked="checked"<?php endif;?> /> <?php echo Mage::helper('webdevlopers_productpageshipping')->__('No') ?>
+                </div>
+            </li>
+       <?php elseif ($this->useShoppingCart()):?>
+            <input id="estimate_cart_yes" type="hidden" name="estimate[cart]" value="1" />
+       <?php endif; ?>
+    </ul>
+    <script type="text/javascript">decorateList('shipping-estimation-form');</script>
+    <div class="actions">
+        <span class="please-wait f-left" id="shipping-estimate-loading-message" style="display:none;">
+            <?php echo Mage::helper('webdevlopers_productpageshipping')->__('Loading rates...') ?>
+        </span>
+        <div class="f-right">
+            <button type="button" title="<?php echo Mage::helper('webdevlopers_productpageshipping')->getButton(); ?>" onclick="estimateProductShipping()" class="button"><span><span><?php echo Mage::helper('webdevlopers_productpageshipping')->__('Get a Quote') ?></span></span></button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div id="shipping-estimate-results" style="display:none">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+function estimateProductShipping()
+{
+    var estimationUrl = '<?php echo $this->jsQuoteEscape($this->getEstimateUrl());?>';
+    var items = $$(['.shipping-estimation-form input',
+                    '.shipping-estimation-form select',
+                    '#product_addtocart_form input',
+                    '#product_addtocart_form select']);
+
+    var validationResult = true;
+
+    // Check the valid input
+    if (!items.map(Validation.validate).all()) {
+        return;
+    }
+
+    var parameters = Form.serializeElements(items, true);
+    $('shipping-estimate-loading-message').show();
+    $('shipping-estimate-results').hide();
+    new Ajax.Updater('shipping-estimate-results', estimationUrl, {
+        parameters: parameters,
+        onComplete: function() {
+            $('shipping-estimate-loading-message').hide();
+            $('shipping-estimate-results').show();
+        }
+    });
+
+}
+//]]>
+</script>
+<?php endif;?>

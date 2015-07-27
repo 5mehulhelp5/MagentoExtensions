@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+    <webdevlopers_productpageshipping_skeleton>
+        <reference name="head">
+            <action method="addCss"><file>css/productpageshipping.css</file></action>
+        </reference>
+        <block  name="shipping.estimate.form" type="webdevlopers_productpageshipping/estimate_form" template="webdevlopers/productpageshipping/estimate/form.phtml" />
+    </webdevlopers_productpageshipping_skeleton>
+
+    <webdevlopers_productpageshipping_left>
+        <update handle="webdevlopers_productpageshipping_skeleton" />
+        <reference name="left">
+            <action method="insert"><block>shipping.estimate.form</block></action>
+        </reference>
+    </webdevlopers_productpageshipping_left>
+
+    <webdevlopers_productpageshipping_right>
+        <update handle="webdevlopers_productpageshipping_skeleton" />
+        <reference name="right">
+            <action method="insert"><block>shipping.estimate.form</block></action>
+        </reference>
+    </webdevlopers_productpageshipping_right>
+
+    <webdevlopers_productpageshipping_estimate_estimate>
+        <block type="webdevlopers_productpageshipping/estimate_result" name="shipping.estimate.result" template="webdevlopers/productpageshipping/estimate/result.phtml" output="toHtml" />
+    </webdevlopers_productpageshipping_estimate_estimate>
+
+</layout>

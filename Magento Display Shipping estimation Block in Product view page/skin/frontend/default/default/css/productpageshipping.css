@@ -1,0 +1,14 @@
+.block-shipping-estimate select,
+.block-shipping-estimate input { width:100%; padding:0; }
+.block-shipping-estimate .radio input { width: 20px; }
+.block-shipping-estimate .radio div.input-box { clear:both; }
+.block-shipping-estimate .block-content li.item { padding:3px 9px; }
+.block-shipping-estimate .block-content li.last { padding-bottom: 7px;}
+.block-shipping-estimate .block-content li label { float:left; color:#666; font-weight:bold; position:relative; z-index:0; }
+.block-shipping-estimate .block-content li label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
+.block-shipping-estimate .block-content li.odd { background: transparent;  }
+.block-shipping-estimate .block-content li.even { background: transparent; }
+.block-shipping-results .block-content { padding: 3px 9px;}
+.block-shipping-results .block-content dl dt, 
+.block-shipping-results .block-content .price { font-weight:bold;}
+.block-shipping-results .block-content dl dd { padding: 0px 0px 5px 10px; }
