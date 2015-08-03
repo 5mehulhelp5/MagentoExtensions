@@ -5,16 +5,10 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @copyright  Copyright (c) Zookal Services Pte Ltd
- * @author     Cyrill Schumacher @schumacherfm
- * @license    See LICENSE.txt
  */
-/** @var $this Mage_Adminhtml_Block_Template */
-/** @var $items Zookal_GShoppingV2_Model_Resource_Taxonomy_Collection */
 ?>
 <ul>
-    <?php foreach ($items as $item):
-        /** @var $item Zookal_GShoppingV2_Model_Taxonomy */ ?>
+    <?php foreach ($items as $item): ?>
         <li value="<?php echo $this->escapeUrl($item->getName()); ?>">
             <strong><?php echo $this->escapeHtml($item->getName()) ?></strong><br/>
             <?php echo $this->escapeHtml($item->getLang()) ?>
