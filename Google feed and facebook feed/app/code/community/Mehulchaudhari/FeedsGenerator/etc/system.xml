@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mehulchaudhari FeedsGenerator Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Mehulchaudhari
+ * @package    Mehulchaudhari_FeedsGenerator
+ * @author     Mehul Chaudhari
+ * @author     Mehul Chaudhari
+ * @copyright  Copyright (c) 2014 ; ;
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <tabs>
+        <mehulchaudhari_extensions translate="label" module="feedsgenerator">
+            <label>Mehulchaudhari Extensions</label>
+            <sort_order>1000000</sort_order>
+        </mehulchaudhari_extensions>
+    </tabs>
+    <sections>
+        <mehulchaudhari_feedsgenerator>
+            <label>Feeds Generator</label>
+            <tab>mehulchaudhari_extensions</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>999999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general>
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <use_magento_cron translate="label">
+                            <label>Use Magento cron</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>If 'yes', feeds will be generated with the Magento cron system. If 'no', a system cron job should be set up to run generation. This cron job should call the appropriate generateFeed methods.</comment>
+                        </use_magento_cron>
+                    </fields>
+                </general>
+                <googleproductsfeed>
+                    <label>Google Products</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active>
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <include_all_products>
+                            <label>Include products by default</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If 'yes', products will be included by default and excluded if the override attribute resolves true for the product. If 'no', products will be excluded by default and only included if the override attribute resolves true for the product.</comment>
+                        </include_all_products>
+                        <custom_filter_attribute>
+                            <label>Override individual products with attribute</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>feedsgenerator/config_productAttributes</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Products with this selected attribute and where the attribute resolves to true for the product will be excluded from the feed if inclusion is set to default (see above option). Otherwise products will only be included if this attribute is available for the product and the attribute resolves to true when inclusion by default is turned off (see above option).</comment>
+                        </custom_filter_attribute>
+                        <output>
+                            <label>Output Path</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>XML files will be generated into this path.</comment>
+                        </output>
+                        <title>
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <author>
+                            <label>Author</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </author>
+                        <default_condition>
+                            <label>Default Condition</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>feedsgenerator/config_condition</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>The default value for the condition attribute in the product feed</comment>
+                        </default_condition>
+                        <m_to_xml_attributes translate="comment">
+                            <label>Optional attributes to include in product feed</label>
+                            <frontend_model>Mehulchaudhari_FeedsGenerator_Block_Googleproducts_FieldMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </m_to_xml_attributes>
+                        <variant_configurables>
+                            <label>Split configurable products into variants</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>28</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If 'yes', configurable products will appear in their feed as multiple simple products, one per assoicated product.</comment>
+                        </variant_configurables>
+                        <link_attributes translate="comment">
+                            <label>Attributes used to link configurable products variants</label>
+                            <frontend_model>Mehulchaudhari_FeedsGenerator_Block_Googleproducts_LinkFieldMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If you are including configurable products in your Google product feed, specify which Magento attributes correspond to the Google variant attributes.</comment>
+                        </link_attributes>
+                        <exclude_cats translate="label">
+                            <label>Categories to Exclude</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Comma-separated list of category IDs to exclude from being used in the Category field.</comment>
+                        </exclude_cats>
+						<run translate="label">
+                            <label>Run Script</label>
+                            <frontend_type>Button</frontend_type>
+							<frontend_model>Mehulchaudhari_FeedsGenerator_Block_Button</frontend_model>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Run Script</comment>
+                        </run>
+                    </fields>
+                </googleproductsfeed>
+            </groups>
+        </mehulchaudhari_feedsgenerator>
+    </sections>
+</config>
