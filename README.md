@@ -24,6 +24,10 @@ so when you install this extension it will provide a functionality to add one mo
 
 10>Magento Send Coupon code to first time and second time buyer:- This extension is a magento extension and this extension will provide a backend utility to set coupon code to send first and second time user a coupon code in magento.So when the user's order goes completed at that time that user get appropiate code via email.
 
+11>Magento Display Shipping estimation Block in Product view page:- This extension will provide a frontend functionality to show shipping estimation block in product view page.
+
+12>Google feed and facebook feed:- This extension will provide a backend utility to generate a feed xml for facebook and Google. One single xml can be used on both.
+
 More comming soon.....
 
 
