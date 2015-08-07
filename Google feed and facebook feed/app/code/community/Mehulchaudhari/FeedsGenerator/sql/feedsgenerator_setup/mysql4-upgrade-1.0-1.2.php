@@ -103,6 +103,7 @@ if (!$indexProcess->isLocked()) {
         'source'        => 'feedsgenerator/googleproducts_source_taxonomy',
         'sort_order'    => 15,
         'type'          => 'int',
+		'global'        => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
     ));
 
     $installer->endSetup();
