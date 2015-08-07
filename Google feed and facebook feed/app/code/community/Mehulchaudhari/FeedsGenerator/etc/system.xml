@@ -166,6 +166,15 @@
                             <show_in_store>1</show_in_store>
                             <comment>Comma-separated list of category IDs to exclude from being used in the Category field.</comment>
                         </exclude_cats>
+						<shipping_weight_unit translate="label">
+						    <label>Shipping Weight Unit</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>We accept the following units: lb, oz, g, kg</comment>
+						</shipping_weight_unit>
 						<run translate="label">
                             <label>Run Script</label>
                             <frontend_type>Button</frontend_type>

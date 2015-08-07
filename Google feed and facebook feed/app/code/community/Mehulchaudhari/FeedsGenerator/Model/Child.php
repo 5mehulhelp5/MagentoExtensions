@@ -213,7 +213,18 @@ class Mehulchaudhari_FeedsGenerator_Model_Child
                 switch ($attribute->magento) {
                     case 'final_price':
                         $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true)));
+						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;
+						
+					case 'special_price':
+                        $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getSpecialPrice(), true)));
+						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
+                        break;
+						
+					case 'price':
+                        $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getPrice(), true)));
+						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
+                        break;	
 
                     case 'product_link':
                         $value = $this->getCleanProductUrl($product);
@@ -300,7 +311,6 @@ class Mehulchaudhari_FeedsGenerator_Model_Child
 
             $product_data[$attribute->feed] = $value;
         }
-
         return $product_data;
     }
 }
