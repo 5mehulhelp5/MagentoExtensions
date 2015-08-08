@@ -175,7 +175,10 @@ class Mehulchaudhari_FeedsGenerator_Model_Child
     {
         $product_data = array();
         $attributes = array_merge((array)$this->config->attributes, $additionalAttributes);
-
+		
+		// store 
+        $store = Mage::getModel('core/store')->load($product->getStoreId());
+		
         foreach ($attributes as $attribute) {
             if ($attribute->type == 'constant') {
                 $value = $attribute->value;
@@ -213,19 +216,19 @@ class Mehulchaudhari_FeedsGenerator_Model_Child
                 switch ($attribute->magento) {
                     case 'final_price':
 						$price = Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true);
-                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
+                        $value = sprintf('%.2f', (float)($store->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;
 						
 					case 'special_price':
 						$price = Mage::helper('tax')->getPrice($product, $product->getSpecialPrice(), true);
-                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
+                        $value = sprintf('%.2f', (float)($store->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;
 						
 					case 'price':
 					    $price = Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true);
-                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
+                        $value = sprintf('%.2f', (float)($store->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;	
 
