@@ -2,15 +2,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">
     <title></title>
     <link rel="self" href="http://localhost/magento/"/>
-    <updated>2015-08-07T11:38:56+00:00</updated>
+    <updated>2015-08-08T06:50:38+00:00</updated>
     <author>
         <name></name>
     </author>
-    <id>tag:http://localhost/magento/,2015-08-07:googleproducts-feeds//german-products.xml</id>
+    <id>tag:http://localhost/magento/,2015-08-08:googleproducts-feeds//german-products.xml</id>
     <entry>
         <g:id>ace000</g:id>
         <g:title>Aviator Sunglasses</g:title>
-        <g:price>295.00 EUR</g:price>
+        <g:price>208.48 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Gunmetal frame with crystal gradient polycarbonate lenses in grey. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/ace000a_1.jpg</g:image_link>
@@ -28,8 +28,8 @@
     <entry>
         <g:id>ace001</g:id>
         <g:title>Jackie O Round Sunglasses</g:title>
-        <g:price>295.00 EUR</g:price>
-        <g:sale_price>225.00 EUR</g:sale_price>
+        <g:price>208.48 EUR</g:price>
+        <g:sale_price>159.01 EUR</g:sale_price>
         <g:availability>in stock</g:availability>
         <g:description>Acetate frame. Polycarbonate lenses.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/ace001_1.jpg</g:image_link>
@@ -43,7 +43,7 @@
     <entry>
         <g:id>ace002</g:id>
         <g:title>Retro Chic Eyeglasses</g:title>
-        <g:price>295.00 EUR</g:price>
+        <g:price>208.48 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Acetate frame. Polycarbonate lenses.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/ace002a_1.jpg</g:image_link>
@@ -56,7 +56,7 @@
     <entry>
         <g:id>abl000</g:id>
         <g:title>Isla Crossbody Handbag</g:title>
-        <g:price>290.00 EUR</g:price>
+        <g:price>204.94 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Pebbled leather. Contrast stitching. Fold over flap with Fasten closure. Crossbody strap. 6&quot; x 8&quot; x 0.75&quot;.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl000_4.jpg</g:image_link>
@@ -68,7 +68,7 @@
     <entry>
         <g:id>abl001</g:id>
         <g:title>Florentine Satchel Handbag</g:title>
-        <g:price>625.00 EUR</g:price>
+        <g:price>441.69 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>Leather. Silver hardware. Inside open pocket. Fasten closure, fabric lining. Handles with 7&quot; drop. 14&quot; x 3.5&quot; x 9&quot;. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl001_1.jpg</g:image_link>
@@ -80,7 +80,7 @@
     <entry>
         <g:id>abl002</g:id>
         <g:title>Flatiron Tablet Sleeve</g:title>
-        <g:price>150.00 EUR</g:price>
+        <g:price>106.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Pebble textured leather tabled case. Top zip closure. Exterior zipper pocket. Fully lined with back wall slip pocket. 8.75&quot; x 11&quot; x .5&quot;. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl002b_1.jpg</g:image_link>
@@ -92,7 +92,7 @@
     <entry>
         <g:id>abl003</g:id>
         <g:title>Broad St. Flapover Briefcase</g:title>
-        <g:price>570.00 EUR</g:price>
+        <g:price>402.82 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Leather, with flap closure. Padded carrying handles. Main compartment has padded laptop pocket, file section and organizer panel. Quick access back pocket. Padded adjustable shoulder strap. 16&quot; x 12&quot; x 3.5&quot;. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl003b_1.jpg</g:image_link>
@@ -104,7 +104,7 @@
     <entry>
         <g:id>abl004</g:id>
         <g:title>Houston Travel Wallet</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Leather. 4&quot; x 6.5&quot; x 0.5&quot;</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl004a_1.jpg</g:image_link>
@@ -116,7 +116,7 @@
     <entry>
         <g:id>abl005</g:id>
         <g:title>Roller Suitcase</g:title>
-        <g:price>650.00 EUR</g:price>
+        <g:price>459.36 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Zip closure. Water resistant hard polycarbonate shell. All direction spinner wheels. Retractable plastic handle. Cross strap interior. 29&quot; x 20&quot; x 13&quot;.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl005a_1.jpg</g:image_link>
@@ -128,7 +128,7 @@
     <entry>
         <g:id>hdb000</g:id>
         <g:title>Body Wash with Lemon Flower Extract and Aloe Vera</g:title>
-        <g:price>28.00 EUR</g:price>
+        <g:price>19.79 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Lemon flower and Aloe Vera extract. Super moisturizing. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb000_1.jpg</g:image_link>
@@ -140,7 +140,7 @@
     <entry>
         <g:id>hdb001</g:id>
         <g:title>Bath Minerals and Salt</g:title>
-        <g:price>25.00 EUR</g:price>
+        <g:price>17.67 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>100% pure Dead Sea salts. Fragrance.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb001_2.jpg</g:image_link>
@@ -152,7 +152,7 @@
     <entry>
         <g:id>hdb002</g:id>
         <g:title>Shea Enfused Hydrating Body Lotion</g:title>
-        <g:price>28.00 EUR</g:price>
+        <g:price>19.79 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Milk and shea extracts. Long lasting moisturizer. 100% natural and gentle enough for sensitive skin. Fast absorbing. Non greasy. 250mL/8.4oz. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb002_1.jpg</g:image_link>
@@ -164,7 +164,7 @@
     <entry>
         <g:id>hdb005</g:id>
         <g:title>Titian Raw Silk Pillow</g:title>
-        <g:price>125.00 EUR</g:price>
+        <g:price>88.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>20&quot; x 20&quot;. Raw Silk. Hidden zipper closure. Interior pillow included. 100% polyester fill. Dry clean. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb005_1.jpg</g:image_link>
@@ -176,7 +176,7 @@
     <entry>
         <g:id>hdb006</g:id>
         <g:title>Shay Printed Pillow</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>20&quot; x 20&quot;. Printed polyester. Hidden zipper closure. Interior pillow included. 100% polyester fill. Spot clean. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb006_1.jpg</g:image_link>
@@ -188,7 +188,7 @@
     <entry>
         <g:id>hdb007</g:id>
         <g:title>Carnegie Alpaca Throw</g:title>
-        <g:price>275.00 EUR</g:price>
+        <g:price>194.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Woven alpaca wool. 4&quot; fringe detail. Dry clean. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb007_1.jpg</g:image_link>
@@ -200,8 +200,8 @@
     <entry>
         <g:id>hdb008</g:id>
         <g:title>Park Row Throw</g:title>
-        <g:price>240.00 EUR</g:price>
-        <g:sale_price>120.00 EUR</g:sale_price>
+        <g:price>169.61 EUR</g:price>
+        <g:sale_price>84.80 EUR</g:sale_price>
         <g:availability>in stock</g:availability>
         <g:description>Woven acrylic/wool/cotton. 50&quot; x 75&quot;. Spot clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb008_1.jpg</g:image_link>
@@ -214,7 +214,7 @@
     <entry>
         <g:id>hdb009</g:id>
         <g:title>Gramercy Throw</g:title>
-        <g:price>275.00 EUR</g:price>
+        <g:price>194.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Woven cotton. 60&quot; x 72&quot;. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdb009_1.jpg</g:image_link>
@@ -226,7 +226,7 @@
     <entry>
         <g:id>hdd000</g:id>
         <g:title>Herald Glass Vase</g:title>
-        <g:price>110.00 EUR</g:price>
+        <g:price>77.74 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Blown glass. 10&quot; diameter. 17&quot; high. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdd000_1.jpg</g:image_link>
@@ -238,7 +238,7 @@
     <entry>
         <g:id>hdd004</g:id>
         <g:title>Stone Salt and Pepper Shakers</g:title>
-        <g:price>65.00 EUR</g:price>
+        <g:price>45.94 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Glazed stoneware. 2&quot; diam. 5.5&quot; x 5.5&quot; coaster. Set of 2. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdd004_1.jpg</g:image_link>
@@ -250,7 +250,7 @@
     <entry>
         <g:id>hdd005</g:id>
         <g:title>Fragrance Diffuser Reeds</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>8&quot; diffuser reeds. 2oz fragrance oil. Decorative wood container.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdd005_1.jpg</g:image_link>
@@ -262,7 +262,7 @@
     <entry>
         <g:id>hdd006</g:id>
         <g:title>Geometric Candle Holders</g:title>
-        <g:price>90.00 EUR</g:price>
+        <g:price>63.60 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Painted glass. Geometric pattern. Set of 3. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdd006_1.jpg</g:image_link>
@@ -274,7 +274,7 @@
     <entry>
         <g:id>hde001</g:id>
         <g:title>Madison LX2200</g:title>
-        <g:price>425.00 EUR</g:price>
+        <g:price>300.35 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>10x Optical Zoom with 24mm Wide-angle and close up.10.7-megapixel backside illuminated CMOS sensor for low light shooting.  3&quot; Multi-angle LCD. SD/SDXC slot. Full HD Video. High speed continuous shooting (up to 5 shots in approx one second) Built in GPS. Easy Panorama. Rechargable Li-ion battery. File formats: Still-JPEG, Audio- WAV, Movies-MOV. Image size: up to 4600x3400. Built in flash. 3.5&quot; x 5&quot; x 4&quot;. 20oz.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde001t_2.jpg</g:image_link>
@@ -286,7 +286,7 @@
     <entry>
         <g:id>hde003</g:id>
         <g:title>Madison RX3400</g:title>
-        <g:price>715.00 EUR</g:price>
+        <g:price>505.29 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>18-55mm zoom lens. 3.0&quot; LCD display with image editing features.  Built in flash with flash modes and pop up. SD/SDXC slot. Full 1080p HD video. Rechargable Lithium-Ion battery. File formats: NEF (RAW), JPEG, MOV. 5&quot; x 3&quot; x 4&quot;, 15oz.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde003a_2.jpg</g:image_link>
@@ -298,7 +298,7 @@
     <entry>
         <g:id>hde004</g:id>
         <g:title>16GB Memory Card</g:title>
-        <g:price>30.00 EUR</g:price>
+        <g:price>21.20 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>16GB SD memory card. Shock, water, and xray resistant.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde004__1.jpg</g:image_link>
@@ -310,7 +310,7 @@
     <entry>
         <g:id>hde005</g:id>
         <g:title>8GB Memory Card</g:title>
-        <g:price>20.00 EUR</g:price>
+        <g:price>14.13 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>8GB SD memory card. Shock, water, and xray resistant.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde005_.jpg</g:image_link>
@@ -322,7 +322,7 @@
     <entry>
         <g:id>hde006</g:id>
         <g:title>Large Camera Bag</g:title>
-        <g:price>120.00 EUR</g:price>
+        <g:price>84.80 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Flap closure. Microfiber. 8.5&quot; x 5&quot; x 6&quot;. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde006t.jpg</g:image_link>
@@ -334,7 +334,7 @@
     <entry>
         <g:id>hde010</g:id>
         <g:title>Madison Earbuds</g:title>
-        <g:price>35.00 EUR</g:price>
+        <g:price>24.73 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Balanced audio. Enhanced bass.  Includes cable clip, diaphragm guard, cleaning tool, travel pouch and airline adapter.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde010_1.jpg</g:image_link>
@@ -346,7 +346,7 @@
     <entry>
         <g:id>hde011</g:id>
         <g:title>Madison Overear Headphones</g:title>
-        <g:price>125.00 EUR</g:price>
+        <g:price>88.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Steel and aluminum. Soft leather pivoting earcups and adjustable headband.  Enhanced bass. Aggressive noise cancellation.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde011_1.jpg</g:image_link>
@@ -358,7 +358,7 @@
     <entry>
         <g:id>hde012</g:id>
         <g:title>Madison 8GB Digital Media Player</g:title>
-        <g:price>150.00 EUR</g:price>
+        <g:price>106.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>2.5-inch LCD screen for crisp, colorful video. Compatible with multiple audio formats. Available in 8GB. Earbuds not included.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde012_3.jpg</g:image_link>
@@ -370,7 +370,7 @@
     <entry>
         <g:id>hde013</g:id>
         <g:title>Compact mp3 Player</g:title>
-        <g:price>40.00 EUR</g:price>
+        <g:price>28.27 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>Ultra Compact. Up to 4GB built in flash memory. The microSD slot supports up to a 16GB microSDHC card for expanded storage options. Music and radio. Lithium-ion battery that runs up to 8 hours when fully charged. USB cable included. Earbuds not included.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde013_.jpg</g:image_link>
@@ -382,7 +382,7 @@
     <entry>
         <g:id>msj000c</g:id>
         <g:title>French Cuff Cotton Twill Oxford</g:title>
-        <g:price>190.00 EUR</g:price>
+        <g:price>134.27 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Button front. Long sleeves. Tapered collar, chest pocket, french cuffs.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj000t_2.jpg</g:image_link>
@@ -393,8 +393,8 @@
     <entry>
         <g:id>msj003c</g:id>
         <g:title>Slim fit Dobby Oxford Shirt</g:title>
-        <g:price>175.00 EUR</g:price>
-        <g:sale_price>140.00 EUR</g:sale_price>
+        <g:price>123.67 EUR</g:price>
+        <g:sale_price>98.94 EUR</g:sale_price>
         <g:availability>in stock</g:availability>
         <g:description>Tailored/Slim fit. Long sleeves. Button cuff. Cotton. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj003t_2.jpg</g:image_link>
@@ -406,7 +406,7 @@
     <entry>
         <g:id>msj006c</g:id>
         <g:title>Plaid Cotton Shirt</g:title>
-        <g:price>160.00 EUR</g:price>
+        <g:price>113.07 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Available in Sharp fit. Refined collar. Button cuff. Cotton. Machine wash. Made in US.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj006t.jpg</g:image_link>
@@ -417,7 +417,7 @@
     <entry>
         <g:id>msj009c</g:id>
         <g:title>Sullivan Sport Coat</g:title>
-        <g:price>510.00 EUR</g:price>
+        <g:price>360.42 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Two button, single vented, notched lapels. Three buttons at cuff. Interior buttoned welt pockets. Full polyester lining. 100% wool. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj009t.jpg</g:image_link>
@@ -428,7 +428,7 @@
     <entry>
         <g:id>msj012c</g:id>
         <g:title>Linen Blazer</g:title>
-        <g:price>455.00 EUR</g:price>
+        <g:price>321.55 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Single vented, notched lapels. Flap pockets. Tonal stitching. Fully lined. Linen. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj012t_2.jpg</g:image_link>
@@ -439,7 +439,7 @@
     <entry>
         <g:id>msj015c</g:id>
         <g:title>Stretch Cotton Blazer</g:title>
-        <g:price>490.00 EUR</g:price>
+        <g:price>346.28 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Two button, single vented, notched lapels. Slim cut through the shoulders chest and waist. Flap pockets, welt inside chest pockets. Cotton/lycra. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/s/msj015t_1.jpg</g:image_link>
@@ -450,7 +450,7 @@
     <entry>
         <g:id>mtk000c</g:id>
         <g:title>Chelsea Tee</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ultrasoft, lightweight V-neck tee. 100% cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk000t.jpg</g:image_link>
@@ -461,7 +461,7 @@
     <entry>
         <g:id>mtk002c</g:id>
         <g:title>Chelsea Tee</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ultrasoft, lightweight V-neck tee. 100% cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk002t.jpg</g:image_link>
@@ -472,7 +472,7 @@
     <entry>
         <g:id>mtk004c</g:id>
         <g:title>Chelsea Tee</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ultrasoft, lightweight V-neck tee. 100% cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk004t.jpg</g:image_link>
@@ -483,7 +483,7 @@
     <entry>
         <g:id>mtk006c</g:id>
         <g:title>Merino V-neck Pullover Sweater</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Long sleeve, pull over style. V-neck. Relaxed fit through the chest. Ribbed neckline, cuff and hem. 100% Merino wool. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk006t.jpg</g:image_link>
@@ -494,7 +494,7 @@
     <entry>
         <g:id>mtk009c</g:id>
         <g:title>Lexington Cardigan Sweater</g:title>
-        <g:price>240.00 EUR</g:price>
+        <g:price>169.61 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>V-neck cardigan. Mother of pearl front button closure. Two dart pockets. Ribbed cuff and hem. 100% cotton. Hand wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk009t.jpg</g:image_link>
@@ -505,7 +505,7 @@
     <entry>
         <g:id>mtk012c</g:id>
         <g:title>Core Striped Sport Shirt</g:title>
-        <g:price>125.00 EUR</g:price>
+        <g:price>88.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Slim fit. Two chest pockets. Silver grommet detail. Grinding and nicking at hems. 100% cotton. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/t/mtk012t.jpg</g:image_link>
@@ -516,7 +516,7 @@
     <entry>
         <g:id>mpd003c</g:id>
         <g:title>Bowery Chino Pants</g:title>
-        <g:price>140.00 EUR</g:price>
+        <g:price>98.94 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Straight leg chino. Back pockets with button closure. 14&quot; leg opening. Zip fly. 100% cotton.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/p/mpd003t.jpg</g:image_link>
@@ -527,7 +527,7 @@
     <entry>
         <g:id>mpd006c</g:id>
         <g:title>The Essential Boot Cut Jean</g:title>
-        <g:price>140.00 EUR</g:price>
+        <g:price>98.94 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Lightly faded cotton denim. Sits below waist. Slim through hip and thigh. 15&quot; leg opening. Zip fly. Machine wash. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/p/mpd006t_2.jpg</g:image_link>
@@ -538,7 +538,7 @@
     <entry>
         <g:id>mpd012c</g:id>
         <g:title>Flat Front  Trouser</g:title>
-        <g:price>195.00 EUR</g:price>
+        <g:price>137.81 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Flat front trouser. Slim through the hip thigh and ankle. Zip fly. Lined. 100% wool. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/p/mpd012t.jpg</g:image_link>
@@ -549,7 +549,7 @@
     <entry>
         <g:id>wbk000c</g:id>
         <g:title>NoLIta Cami</g:title>
-        <g:price>150.00 EUR</g:price>
+        <g:price>106.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Silk cami. Tie front detail, with hook and eye. Ruched neckline. Loose through the chest and bodice. 100% Silk. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/b/wbk000t.jpg</g:image_link>
@@ -561,7 +561,7 @@
     <entry>
         <g:id>wbk003c</g:id>
         <g:title>Tori Tank</g:title>
-        <g:price>60.00 EUR</g:price>
+        <g:price>42.40 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ribbed scoop neck tank. 100% cotton.Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/b/wbk003t.jpg</g:image_link>
@@ -573,7 +573,7 @@
     <entry>
         <g:id>wbk006c</g:id>
         <g:title>Delancy Cardigan Sweater</g:title>
-        <g:price>275.00 EUR</g:price>
+        <g:price>194.34 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Oversized knitted silk blend cardigan. Front button closure. Ribbed hem. Silk/rayon. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/b/wbk006t_2.jpg</g:image_link>
@@ -584,7 +584,7 @@
     <entry>
         <g:id>wbk009c</g:id>
         <g:title>Ludlow Oxford Top</g:title>
-        <g:price>185.00 EUR</g:price>
+        <g:price>130.74 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Oxford, fitted through the waist. V-neck, front button closure.100% cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/b/wbk009t.jpg</g:image_link>
@@ -595,7 +595,7 @@
     <entry>
         <g:id>wbk012c</g:id>
         <g:title>Elizabeth Knit Top</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Loose fitting from the shoulders, open weave knit top. Semi sheer.  Slips on. Faux button closure detail on the back. Linen/Cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/b/wbk012t.jpg</g:image_link>
@@ -607,7 +607,7 @@
     <entry>
         <g:id>wsd000c</g:id>
         <g:title>Essex Pencil Skirt</g:title>
-        <g:price>185.00 EUR</g:price>
+        <g:price>130.74 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Knee length skirt. Sits on natural waist. Fitted through the hip. Exposed waist belt loops. Hidden zip and hook and eye closure in back. Full lining. Wool/cotton/polyester. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/s/wsd000t.jpg</g:image_link>
@@ -618,8 +618,8 @@
     <entry>
         <g:id>wsd005c</g:id>
         <g:title>Racer Back Maxi Dress</g:title>
-        <g:price>280.00 EUR</g:price>
-        <g:sale_price>224.00 EUR</g:sale_price>
+        <g:price>197.88 EUR</g:price>
+        <g:sale_price>158.30 EUR</g:sale_price>
         <g:availability>in stock</g:availability>
         <g:description>Racer back maxi dress. Pull over style. Loose fitting. Straight skirt falls to floor. Viscose. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/s/wsd005t_2.jpg</g:image_link>
@@ -631,7 +631,7 @@
     <entry>
         <g:id>wsd008c</g:id>
         <g:title>Ludlow Sheath Dress</g:title>
-        <g:price>305.00 EUR</g:price>
+        <g:price>215.54 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Sleeveless, jewel neckline with deep Vee in back. Fitted through waist and hip. 100% polyester lining. Cotton/wool. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/s/wsd008t_2.jpg</g:image_link>
@@ -642,7 +642,7 @@
     <entry>
         <g:id>wsd013c</g:id>
         <g:title>Lafayette Convertible Dress</g:title>
-        <g:price>340.00 EUR</g:price>
+        <g:price>240.28 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Two sash, convertible neckline with front ruffle detail. Unhemmed, visisble seams. Hidden side zipper. Unlined. Wool/elastane. Hand wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/s/wsd013t.jpg</g:image_link>
@@ -654,7 +654,7 @@
     <entry>
         <g:id>wpd000c</g:id>
         <g:title>TriBeCa Skinny Jean</g:title>
-        <g:price>185.00 EUR</g:price>
+        <g:price>130.74 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ultra slim-fit, stretch denim. Mid rise. 5 pockets, tonal stitching,. Cotton. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/p/wpd000t.jpg</g:image_link>
@@ -665,7 +665,7 @@
     <entry>
         <g:id>wpd005c</g:id>
         <g:title>DUMBO Boyfriend Jean</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Straight leg boyfriend-fit. Distressed denim. 5 pockets. Contrast stitch detailing. Large to size, choose size down. Machine wash.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/p/wpd005t.jpg</g:image_link>
@@ -676,7 +676,7 @@
     <entry>
         <g:id>wpd010c</g:id>
         <g:title>Park Avenue Pleat Front Trousers</g:title>
-        <g:price>245.00 EUR</g:price>
+        <g:price>173.14 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Wide leg pant, front pleat detail. Sits on natural waist. Wool, unlined. Dry clean.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/w/p/wpd010t.jpg</g:image_link>
@@ -687,7 +687,7 @@
     <entry>
         <g:id>aws000c</g:id>
         <g:title>Barclay d'Orsay pump, Nude</g:title>
-        <g:price>390.00 EUR</g:price>
+        <g:price>275.61 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Leather. 3.5&quot; heel. Peep toe and ankle strap. Leather insole and lining.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/w/aws000a_2.jpg</g:image_link>
@@ -698,7 +698,7 @@
     <entry>
         <g:id>aws005c</g:id>
         <g:title>Ann Ankle Boot</g:title>
-        <g:price>470.00 EUR</g:price>
+        <g:price>332.15 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Leather. Inside zipper. 3-button outside detail. 4.5&quot; heel, 1&quot; platform, 3.5&quot; equiv. Leather insole and lining. Red sole. Made in Italy.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/w/aws005a_2.jpg</g:image_link>
@@ -709,7 +709,7 @@
     <entry>
         <g:id>aws010c</g:id>
         <g:title>Hana Flat, Charcoal</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Suede. Square toe. 1/4&quot; flat heel. Padded leather insole and lining. Rubber outsole provides traction.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/w/aws010.jpg</g:image_link>
@@ -720,7 +720,7 @@
     <entry>
         <g:id>ams000c</g:id>
         <g:title>Dorian Perforated Oxford</g:title>
-        <g:price>410.00 EUR</g:price>
+        <g:price>289.75 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Polished leather upper. Perforated detail on toe. Oxford lace-up front. Leather lining and footbed. 1&quot; rubber heel. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/m/ams000a_2.jpg</g:image_link>
@@ -731,7 +731,7 @@
     <entry>
         <g:id>ams005c</g:id>
         <g:title>Wingtip Cognac Oxford</g:title>
-        <g:price>375.00 EUR</g:price>
+        <g:price>265.01 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Wingtip medallion toe oxford with contrast waxed cotton laces.  Leather upper and lining. Leather sole. Made in Italy.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/m/ams005a_2.jpg</g:image_link>
@@ -742,7 +742,7 @@
     <entry>
         <g:id>ams010c</g:id>
         <g:title>Suede Loafer, Navy</g:title>
-        <g:price>310.00 EUR</g:price>
+        <g:price>219.08 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Suede loafer. Contrast stitching. Leather lined. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/m/ams010a_2.jpg</g:image_link>
@@ -753,7 +753,7 @@
     <entry>
         <g:id>abl006c</g:id>
         <g:title>Classic Hardshell Suitcase</g:title>
-        <g:price>600.00 EUR</g:price>
+        <g:price>424.02 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Water resistant hard polycarbonate shell. All direction spinner wheels. Zip closure. Locking, retractable metal handle. Cross strap and self repairing zipper interior. Padded side handle for lateral carry. 21&quot; x 17&quot; x 10&quot;.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/b/abl0006a_1.jpg</g:image_link>
@@ -764,7 +764,7 @@
     <entry>
         <g:id>hdd001c</g:id>
         <g:title>Modern Murray Ceramic Vase</g:title>
-        <g:price>135.00 EUR</g:price>
+        <g:price>95.40 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Ceramic. 5.5&quot; diameter, 12&quot; high. </g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hdd001_2.jpg</g:image_link>
@@ -775,7 +775,7 @@
     <entry>
         <g:id>hde007</g:id>
         <g:title>3-Year Warranty</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>3-Year coverage from date of purchase on hardware failures. Fixed or receive full replacement cost in 5 days or less - guaranteed. Free 2-way shipping for repairs. 100% parts and labor covered with no deductables. Fully transferable with gifts. Cancel anytime for a full refund within the first 30 days.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde007_3.jpg</g:image_link>
@@ -786,7 +786,7 @@
     <entry>
         <g:id>hde008</g:id>
         <g:title>5-Year Warranty</g:title>
-        <g:price>100.00 EUR</g:price>
+        <g:price>70.67 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>5-Year coverage from date of purchase on hardware failures. Fixed or receive full replacement cost in 5 days or less - guaranteed. Free 2-way shipping for repairs. 100% parts and labor covered with no deductables. Fully transferable with gifts. Cancel anytime for a full refund within the first 30 days.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/h/d/hde007_2.jpg</g:image_link>
@@ -797,7 +797,7 @@
     <entry>
         <g:id>hbm000</g:id>
         <g:title>A Tale of Two Cities</g:title>
-        <g:price>10.00 EUR</g:price>
+        <g:price>7.07 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Novel by Charles Dickens, published both serially and in book form in 1859. The story is set in the late 18th century against the background of the French Revolution.While political events drive the story, Dickens takes a decidedly antipolitical tone, lambasting both aristocratic tyranny and revolutionary excess--the latter memorably caricatured in Madame Defarge, who knits beside the guillotine. The book is perhaps best known for its opening lines, &quot;It was the best of times, it was the worst of times,&quot; and for Carton's last speech, in which he says of his replacing Darnay in a prison cell, &quot;It is a far, far better thing that I do, than I have ever done; it is a far, far better rest that I go to, than I have ever known.&quot;</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/t/a/tale_two_cities_1_1.jpg</g:image_link>
@@ -808,7 +808,7 @@
     <entry>
         <g:id>hbm003 </g:id>
         <g:title>Alice in Wonderland</g:title>
-        <g:price>5.00 EUR</g:price>
+        <g:price>3.53 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>After a tumble down the rabbit hole, Alice finds herself far away from home in the absurd world of Wonderland. As mind-bending as it is delightful, Lewis Carroll’s 1865 novel is pure magic for young and old alike. 96pp. Downloadable as pdf.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/l/alice_wonderland.jpeg</g:image_link>
@@ -819,7 +819,7 @@
     <entry>
         <g:id>mpd000c</g:id>
         <g:title>Khaki Bowery Chino Pants</g:title>
-        <g:price>140.00 EUR</g:price>
+        <g:price>98.94 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Straight leg chino. Back pockets with button closure. 14&quot; leg opening. Zip fly. 100% cotton.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/m/p/mpd000t.jpg</g:image_link>
@@ -830,7 +830,7 @@
     <entry>
         <g:id>acj001c</g:id>
         <g:title>Pearl Strand Necklace</g:title>
-        <g:price>250.00 EUR</g:price>
+        <g:price>176.68 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>AA&amp; quality 6.0-6.5mm pearls. Double knotted on silk thread. 24&quot; strand. 14K gold hook-and-eye clasp. Made in Indonesia.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj001_1_2.jpg</g:image_link>
@@ -841,7 +841,7 @@
     <entry>
         <g:id>acj0006s</g:id>
         <g:title>Blue Horizons Bracelets</g:title>
-        <g:price>55.00 EUR</g:price>
+        <g:price>38.87 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Set of 3. Glass beads on metal band. 2.75&quot; diameter. Made in India.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj006_2.jpg</g:image_link>
@@ -858,7 +858,7 @@
     <entry>
         <g:id>acj003</g:id>
         <g:title>Pearl Stud Earrings</g:title>
-        <g:price>110.00 EUR</g:price>
+        <g:price>77.74 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>AA&amp; quality 6.5mm pearl. 14K gold post. Made in Indonesia.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj003_2.jpg</g:image_link>
@@ -870,7 +870,7 @@
     <entry>
         <g:id>acj004</g:id>
         <g:title>Swing Time Earrings</g:title>
-        <g:price>75.00 EUR</g:price>
+        <g:price>53.00 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Carved horn. Sterling silver hook. 2.25&quot;. Made in Haiti.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj004_2.jpg</g:image_link>
@@ -887,7 +887,7 @@
     <entry>
         <g:id>acj000</g:id>
         <g:title>Silver Desert Necklace</g:title>
-        <g:price>210.00 EUR</g:price>
+        <g:price>148.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Traditional Tuareg design on hand-hammered and chiseled silver. The Tuareg of Saharan Africa are known for their decorative jewelry craft. 16&quot;. Silver, stone beads. Made in Niger.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj000_2.jpg</g:image_link>
@@ -904,7 +904,7 @@
     <entry>
         <g:id>acj005</g:id>
         <g:title>Swiss Movement Sports Watch</g:title>
-        <g:price>500.00 EUR</g:price>
+        <g:price>353.35 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Swiss quartz movement. Date function. 3-hands. Notch markers. Round, stainless steel case (42 mm x 15 x 13) and link strap (19mm x 8.25&quot;); Traditional clasp. Pull-out crown. Water resistant 125 feet.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/c/acj005_2.jpg</g:image_link>
@@ -921,7 +921,7 @@
     <entry>
         <g:id>hbm001</g:id>
         <g:title>Around the World in 80 Days</g:title>
-        <g:price>5.00 EUR</g:price>
+        <g:price>3.53 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>For a bet, Phileas Fogg sets out with his servant Passeportout to achieve an incredible journey - from London to Paris, Brindisi, Suez, Bombay, Calcutta, Singapore, Hong Kong, San Francisco, New York and back to London again, all in just eighty days. There are many alarms and surprises along the way - and a last minute setback that makes all the difference between winning and losing.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/8/0/80_days.jpg</g:image_link>
@@ -932,7 +932,7 @@
     <entry>
         <g:id>hbm005</g:id>
         <g:title>Falling by I Am Not Lefthanded</g:title>
-        <g:price>2.00 EUR</g:price>
+        <g:price>1.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Falling by  I Am Not Lefthanded. Album: Yes Means No. Running time 3:16. Downloadable as mp3.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/l/e/lefthanded.png</g:image_link>
@@ -943,7 +943,7 @@
     <entry>
         <g:id>hbm006</g:id>
         <g:title>If You Were by Keshco</g:title>
-        <g:price>2.00 EUR</g:price>
+        <g:price>1.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>If You Were by Keshco. Album: Trolley Crash. Duration: 3:31. Downloadable as mp3.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/k/e/keshco.jpg</g:image_link>
@@ -954,7 +954,7 @@
     <entry>
         <g:id>hbm007</g:id>
         <g:title>Can't Stop It by Shearer</g:title>
-        <g:price>2.00 EUR</g:price>
+        <g:price>1.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Can't Stop It by Shearer. Album: Eve. Duration: 2:49. Downloadable as mp3.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/h/shearer_2.jpg</g:image_link>
@@ -965,7 +965,7 @@
     <entry>
         <g:id>hbm008</g:id>
         <g:title>Love is an Eternal Lie by The Sleeping Tree</g:title>
-        <g:price>2.00 EUR</g:price>
+        <g:price>1.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Love is an Eternal Lie by The Sleeping Tree. Album: Music to Accompany the World Traveller. Duration: 3:11. Downloadable as mp3.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/l/sleepingtree_1.jpg</g:image_link>
@@ -976,7 +976,7 @@
     <entry>
         <g:id>hbm010</g:id>
         <g:title>Fire [Kalima remix] by Unannounced Guest</g:title>
-        <g:price>2.00 EUR</g:price>
+        <g:price>1.41 EUR</g:price>
         <g:availability>in stock</g:availability>
         <g:description>Fire [Kalima remix] by Unannounced Guest. Duration: 2:48. Downloadable as mp3.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/u/n/unannouncedguest.jpg</g:image_link>
@@ -987,7 +987,7 @@
     <entry>
         <g:id>shw004</g:id>
         <g:title>Broadway Pump</g:title>
-        <g:price>410.00 EUR</g:price>
+        <g:price>289.75 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>Dyed mohair upper. 3.5&quot; heel. Leather insole and lining. Imported.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/h/shw004a_5.jpg</g:image_link>
@@ -998,7 +998,7 @@
     <entry>
         <g:id>shw005</g:id>
         <g:title>Ellis Flat</g:title>
-        <g:price>250.00 EUR</g:price>
+        <g:price>176.68 EUR</g:price>
         <g:availability>out of stock</g:availability>
         <g:description>Suede upper. Rubber 0.5&quot; heel. Domestic.</g:description>
         <g:image_link>http://localhost/magento/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/s/h/shw005a_5.jpg</g:image_link>

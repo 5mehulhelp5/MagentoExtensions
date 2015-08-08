@@ -196,20 +196,13 @@ class Mehulchaudhari_FeedsGenerator_Model_Googleproducts_Cron extends Mehulchaud
                         break;
 						
 					case 'g:price':
-					      $safeString = sprintf('%.2f', $value).' '.Mage::getStoreConfig('currency/options/default',$this->_store->getStoreId());
+					      $safeString = sprintf('%.2f', $this->_store->convertPrice($value, false, false)).' '.Mage::getStoreConfig('currency/options/default',$this->_store->getStoreId());
 					    break;
 						
 					case 'g:sale_price':
 					       if($value && $value != ''){
-						        $safeString = sprintf('%.2f', $value).' '.Mage::getStoreConfig('currency/options/default',$this->_store->getStoreId());
+						       $safeString = sprintf('%.2f', $this->_store->convertPrice($value, false, false)).' '.Mage::getStoreConfig('currency/options/default',$this->_store->getStoreId());
 						   }
-					    break;
-						
-						
-					case 'g:sale_price_effective_date':
-					      if($value && $value != ''){
-						      $safeString = $value;
-						  }
 					    break;
 						
 					case 'g:shipping_weight':
@@ -255,6 +248,9 @@ class Mehulchaudhari_FeedsGenerator_Model_Googleproducts_Cron extends Mehulchaud
                     default:
                         // Google doesn't like HTML tags in the feed
                         $safeString = strip_tags($value);
+						
+						if(!$safeString || $safeString == '')$safeString = null;
+						
                         break;
                 }
 

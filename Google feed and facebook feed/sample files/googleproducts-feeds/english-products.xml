@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:g="http://base.google.com/ns/1.0">
     <title></title>
     <link rel="self" href="http://localhost/magento/"/>
-    <updated>2015-08-07T11:36:40+00:00</updated>
+    <updated>2015-08-08T06:49:35+00:00</updated>
     <author>
         <name></name>
     </author>
-    <id>tag:http://localhost/magento/,2015-08-07:googleproducts-feeds//english-products.xml</id>
+    <id>tag:http://localhost/magento/,2015-08-08:googleproducts-feeds//english-products.xml</id>
     <entry>
         <g:id>ace000</g:id>
         <g:title>Aviator Sunglasses</g:title>

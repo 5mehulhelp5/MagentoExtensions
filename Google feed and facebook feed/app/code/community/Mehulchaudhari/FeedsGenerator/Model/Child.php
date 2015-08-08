@@ -212,17 +212,20 @@ class Mehulchaudhari_FeedsGenerator_Model_Child
                 // if this is a computed attribute, handle it depending on its code
                 switch ($attribute->magento) {
                     case 'final_price':
-                        $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true)));
+						$price = Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true);
+                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;
 						
 					case 'special_price':
-                        $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getSpecialPrice(), true)));
+						$price = Mage::helper('tax')->getPrice($product, $product->getSpecialPrice(), true);
+                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;
 						
 					case 'price':
-                        $value = sprintf('%.2f', (float)(Mage::helper('tax')->getPrice($product, $product->getPrice(), true)));
+					    $price = Mage::helper('tax')->getPrice($product, $product->getFinalPrice(), true);
+                        $value = sprintf('%.2f', (float)(Mage::app()->getStore()->convertPrice($price, false, false)));
 						$value .= ' '.Mage::getStoreConfig('currency/options/default',$product->getStoreId());
                         break;	
 
