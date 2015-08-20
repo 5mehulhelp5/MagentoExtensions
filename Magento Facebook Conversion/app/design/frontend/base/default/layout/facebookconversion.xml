@@ -1,0 +1,12 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <facebookconversion_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="facebookconversion/index" name="facebookconversion_index" template="facebookconversion/index.phtml"/>   
+    </reference>   
+  </facebookconversion_index_index>   
+</layout>   
+	
