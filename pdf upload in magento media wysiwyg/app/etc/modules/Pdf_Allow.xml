@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Pdf_Allow>
+      <active>true</active>
+      <codePool>local</codePool>
+      <depends>
+             <Mage_Cms/>
+      </depends>
+    </Pdf_Allow>
+  </modules>
+</config>
