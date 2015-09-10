@@ -1,0 +1,9 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <catalog_product_view>   
+    <reference name="product.info.extrahint">   
+      <block type="houzzbutton/houzzbutton" name="houzzbutton_houzzbutton" as="houzzbutton" template="houzzbutton/houzzbutton.phtml"/>   
+    </reference>    
+  </catalog_product_view>
+</layout>   
+	

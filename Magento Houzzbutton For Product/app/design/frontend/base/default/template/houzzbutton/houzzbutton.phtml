@@ -1,0 +1,31 @@
+<?php 
+$enable = (bool)$this->helper('houzzbutton')->getConfig('enable');
+$product = $this->getProduct();
+$product->getCategoryIds();
+if($enable){ 
+$button = $this->helper('houzzbutton')->getConfig('name');
+$HZID = $this->helper('houzzbutton')->getConfig('hzid');
+$count = (bool)$this->helper('houzzbutton')->getConfig('count');
+$_description = $this->helper('catalog/output')->productAttribute($product, $product->getDescription(), 'description');
+$image = $this->helper('catalog/image')->init($product, 'image');
+$categoriesids = $product->getCategoryIds();
+$last = @end($categoriesids);
+$categoryname = Mage::getModel('catalog/category')->load($last)->getName();
+$locale = Mage::app()->getLocale()->getLocaleCode();
+?>
+
+<!-- 34072 -->
+<a class="houzz-share-button" 
+   data-url="<?php echo $product->getProductUrl(); ?>" 
+   data-hzid="<?php echo $HZID; ?>" 
+   data-locale="<?php echo $locale; ?>"
+   data-title="<?php echo $product->getName(); ?>" 
+   data-img="<?php echo $image; ?>" 
+   data-desc="<?php echo $_description; ?>"
+   data-category="<?php echo $categoryname; ?>"
+   data-showcount="<?php echo $count; ?>"
+   href="https://www.houzz.com"><?php if($button){echo $button;}else{echo $this->__('Houzz');} ?></a>
+<script>(function(d,s,id){if(!d.getElementById(id)){var js=d.createElement(s);js.id=id;js.async=true;js.src="//platform.houzz.com/js/widgets.js?"+(new Date().getTime());var ss=d.getElementsByTagName(s)[0];ss.parentNode.insertBefore(js,ss);}})(document,"script","houzzwidget-js");</script>
+
+<?php } ?>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Mehulchaudhari_Houzzbutton>
+      <version>0.1.0</version>
+    </Mehulchaudhari_Houzzbutton>
+  </modules>
+  <frontend>
+		<layout>
+		  <updates>
+			<houzzbutton>
+			  <file>houzzbutton.xml</file>
+			</houzzbutton>
+		  </updates>
+		</layout>
+  </frontend>
+  <global>
+    <helpers>
+      <houzzbutton>
+        <class>Mehulchaudhari_Houzzbutton_Helper</class>
+      </houzzbutton>
+    </helpers>
+	<blocks>
+	  <houzzbutton>
+		<class>Mehulchaudhari_Houzzbutton_Block</class>
+	  </houzzbutton>
+	</blocks>
+  </global>
+</config> 

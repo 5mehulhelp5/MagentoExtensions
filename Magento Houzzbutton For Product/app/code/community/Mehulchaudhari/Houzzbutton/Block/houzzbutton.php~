@@ -1,0 +1,8 @@
+<?php   
+class Mehulchaudhari_Houzzbutton_Block_Index extends Mage_Core_Block_Template{   
+
+
+
+
+
+}
