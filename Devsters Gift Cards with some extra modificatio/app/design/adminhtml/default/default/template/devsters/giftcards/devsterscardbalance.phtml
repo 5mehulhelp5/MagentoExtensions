@@ -1,0 +1,13 @@
+<script type="text/javascript">
+function updateBalance(button, fieldId)
+{   
+    var alertstring = "Updating balance to: " + $(button).previous('input').getValue() + " for Card ID :" + fieldId  ;
+    alert (alertstring);
+
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/updateBalance') ?>', {
+        method: 'post',
+        parameters: { id: fieldId, gift_card_balance: $(button).previous('input').getValue() }
+    });
+
+}
+</script>

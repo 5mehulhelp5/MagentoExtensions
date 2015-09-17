@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <gift_adminhtml_giftcards_index>
+        <reference name="content">
+            <block type="gift/adminhtml_giftcards" name="giftcards" />
+        </reference>
+        <reference name="js">
+            <block type="core/template" template="devsters/giftcards/devsterscardbalance.phtml" />
+        </reference>
+    </gift_adminhtml_giftcards_index>
+   <!-- adminhtml sales order -->
+    <adminhtml_sales_order_view>
+        <reference name="order_totals">
+            <block type="Devsters_Pay_Adminhtml_Block_Sales_Order_Totals"/>
+        </reference>
+    </adminhtml_sales_order_view>
+    <!-- -->
+    <adminhtml_sales_order_invoice_new>
+        <reference name="invoice_totals">
+            <block type="devsters_pay_adminhtml_block_sales_order_invoice_totals" />
+        </reference>
+    </adminhtml_sales_order_invoice_new>
+    <adminhtml_sales_order_invoice_view>
+        <reference name="invoice_totals">
+            <block type="devsters_pay_adminhtml_block_sales_order_invoice_totals" />
+        </reference>
+    </adminhtml_sales_order_invoice_view>
+    <adminhtml_sales_order_invoice_updateqty>
+        <reference name="invoice_totals">
+            <block type="devsters_pay_adminhtml_block_sales_order_invoice_totals" />
+        </reference>
+    </adminhtml_sales_order_invoice_updateqty>
+    <!-- -->
+    <adminhtml_sales_order_creditmemo_new>
+        <reference name="creditmemo_totals">
+            <block type="Devsters_Pay_Adminhtml_Block_Sales_Order_Creditmemo_Totals"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_new>
+    <adminhtml_sales_order_creditmemo_view>
+        <reference name="creditmemo_totals">
+            <block type="Devsters_Pay_Adminhtml_Block_Sales_Order_Creditmemo_Totals"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_view>
+    <adminhtml_sales_order_creditmemo_updateqty>
+        <reference name="creditmemo_totals">
+            <block type="Devsters_Pay_Adminhtml_Block_Sales_Order_Creditmemo_Totals"/>
+        </reference>
+    </adminhtml_sales_order_creditmemo_updateqty>
+</layout>

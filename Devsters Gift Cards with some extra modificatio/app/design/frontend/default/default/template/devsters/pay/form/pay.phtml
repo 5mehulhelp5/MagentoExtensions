@@ -1,0 +1,18 @@
+<?php $_code=$this->getMethodCode() ?>
+
+
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <li>
+        <label for="<?php echo $_code ?>_gift_card_no" class="required"><em>*</em><?php echo $this->__('Gift Card No#') ?></label>
+        <span class="input-box">
+            <input type="hidden" name= "tvalue" value = "<?php Mage::getSingleton('checkout/session')->getQuote()->getGrandTotal(); ?>" />
+            <input type="text" title="<?php echo $this->__('Gift Card No#') ?>" class="input-text required-entry" id="<?php echo $_code ?>_gift_card_no" name="payment[gift_card_no]" value="<?php echo $this->htmlEscape($this->getInfoData('gift_card_no')) ?>" />
+        </span>
+    </li>
+</ul>
+<div>
+	<?php echo $this->getMethod()->getConfigData('message'); ?>
+</div>
+
+
+<? 

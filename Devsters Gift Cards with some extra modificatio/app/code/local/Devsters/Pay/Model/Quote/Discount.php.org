@@ -1,0 +1,74 @@
+<?php
+class Devsters_Pay_Model_Quote_Discount extends Mage_Sales_Model_Quote_Address_Total_Abstract
+{
+    public function __construct()
+    {
+        $this->setCode('devstersgiftcard');
+    }
+
+    /**
+     * Get label
+     *
+     * @return string
+     */
+    public function getLabel()
+    {
+        return Mage::helper('pay')->__('Devsters Gift Card');
+    }
+
+    /**
+     * Collect totals information about insurance
+     *
+     * @param   Mage_Sales_Model_Quote_Address $address
+     */
+    public function collect(Mage_Sales_Model_Quote_Address $address)
+    {
+        parent::collect($address);
+        if (($address->getAddressType() == 'billing')) {
+            return $this;
+        }
+        
+        $amount =   number_format($address->getQuote()->getGiftCardValue(),2);
+
+        $this->_aggregateItemDiscount($address, $amount);
+    }
+    
+    
+
+    
+    /**
+     * Aggregate item discount information to address data and related properties
+     *
+     * @param   $amount
+     * @return  Mage_SalesRule_Model_Quote_Discount
+     */
+    protected function _aggregateItemDiscount($address, $amount)
+    {
+        if ($amount) {
+            $this->_addAmount(-$amount);
+            $this->_addBaseAmount(-$amount);
+        }
+        return $this;
+    }
+    
+    /**
+     * Add giftcard totals information to address object
+     *
+     * @param   Mage_Sales_Model_Quote_Address $address
+     */
+    public function fetch(Mage_Sales_Model_Quote_Address $address)
+    {
+        if (($address->getAddressType() == 'billing')) {
+            $amount =   number_format($address->getQuote()->getGiftCardValue(),2);
+            if ($amount != 0) {
+                $address->addTotal(array(
+                    'code'  => $this->getCode(),
+                    'title' => $this->getLabel(),
+                    'value' => $amount
+                ));
+            }
+        }
+
+        return $this;
+    }
+}

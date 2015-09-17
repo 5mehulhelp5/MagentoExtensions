@@ -1,0 +1,9 @@
+<?php
+$installer = $this;
+/* @var $installer Mage_Customer_Model_Entity_Setup */
+
+$installer->startSetup();
+$installer->getConnection()->addColumn($this->getTable('sales/order_item'), 'gift_card_earn', 'int(11) NOT NULL default 0');
+$installer->getConnection()->addColumn($this->getTable('sales/order_item'), 'gift_card_base_earn', 'int(11) NOT NULL default 0');
+$installer->endSetup();
+

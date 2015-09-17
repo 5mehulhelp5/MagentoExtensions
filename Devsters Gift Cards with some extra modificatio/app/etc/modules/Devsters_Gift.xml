@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Devsters_Gift>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog />
+                <Mage_Core />
+                <Mage_Payment /> 
+            </depends>
+        </Devsters_Gift>
+    </modules>
+</config>
