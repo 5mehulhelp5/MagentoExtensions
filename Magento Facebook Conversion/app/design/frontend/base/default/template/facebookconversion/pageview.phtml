@@ -1,0 +1,36 @@
+<?php 
+     $request = Mage::app()->getFrontController()->getRequest();
+     $module = $request->getModuleName();
+     $controller = $request->getControllerName();
+     $action = $request->getActionName();
+
+     $enable = $this->getEnable();
+     $custom = $this->getCustom();
+     if (!$enable) {
+         return;
+     }
+     if($module == 'checkout' && ($controller == 'onepage' || $controller == 'multishipping') && $action == 'success'){
+         return;
+     }
+     if($custom && ($controller == 'product' && $action == 'view')){
+        return;
+     } 
+     
+     $id = $this->getPixelId();
+?>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+// Insert Your Facebook Pixel ID below. 
+fbq('init', '<?php echo $id ?>');
+fbq('track', 'PageView');
+</script>
+<!-- Insert Your Facebook Pixel ID below. --> 
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=<?php echo $id ?>&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->

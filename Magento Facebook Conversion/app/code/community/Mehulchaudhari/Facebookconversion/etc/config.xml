@@ -6,15 +6,6 @@
     </Mehulchaudhari_Facebookconversion>
   </modules>
   <frontend>
-    <routers>
-      <facebookconversion>
-        <use>standard</use>
-          <args>
-            <module>Mehulchaudhari_Facebookconversion</module>
-            <frontName>facebookconversion</frontName>
-          </args>
-      </facebookconversion>
-    </routers>
 		<layout>
 		  <updates>
 			<facebookconversion>

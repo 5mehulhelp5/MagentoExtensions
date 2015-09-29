@@ -14,3 +14,11 @@ window._fbq = window._fbq || [];
 window._fbq.push(['track', '6038040531586', {'value':'0.01','currency':'USD'}]);
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6038040531586&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+
+
+https://developers.facebook.com/docs/ads-for-websites/drive-conversions
+https://developers.facebook.com/docs/ads-for-websites/pixel-troubleshooting
+https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-audiences/v2.4
+https://developers.facebook.com/docs/marketing-api/facebook-pixel/v2.4
+https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-audiences/v2.4#setuppixel

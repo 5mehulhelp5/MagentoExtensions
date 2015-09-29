@@ -1,0 +1,33 @@
+<?php 
+     $enable = $this->getEnable();
+     $custom = $this->getCustom();
+     if (!$enable || !$custom) {
+         return;
+     }
+     $id = $this->getPixelId();
+     $currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+     $product = Mage::registry('product');
+     $category = Mage::registry('current_category');
+?>
+<!-- Custom Audience Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+// Insert Your Custom Audience Pixel ID below. 
+fbq('init', '<?php echo $id ?>');
+
+fbq('track', 'ViewContent', {
+content_name: '<?php echo $product->getName(); ?>',
+<?php if($category){?>content_category: '<?php echo $category->getName();?>',<?php }?>
+
+content_ids: ['<?php echo $product->getSku(); ?>'],
+content_type: 'product',
+value: <?php echo $product->getFinalPrice();?>,
+currency: '<?php echo $currency_code; ?>'
+});
+
+</script>
+<!-- End Custom Audience Pixel Code -->
