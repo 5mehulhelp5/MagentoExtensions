@@ -1,0 +1,51 @@
+<?php 
+     $enable = $this->getEnable();
+     $custom = $this->getCustom();
+     if (!$enable) {
+         return;
+     }
+     $id = $this->getPixelId();
+     $currency_code = $this->getCurrencyCode();
+     $product = $this->getProductData();
+     $category = $this->getCategoryData(); 
+     $sku = $product['sku'];
+?>
+<?php if(!$custom){ ?>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+// Insert Your Facebook Pixel ID below. 
+fbq('init', '<?php echo $id ?>');
+fbq('track', 'PageView');
+</script>
+<!-- Insert Your Facebook Pixel ID below. --> 
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=<?php echo $id ?>&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<?php }else{ ?>
+<!-- Custom Audience Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+// Insert Your Custom Audience Pixel ID below. 
+fbq('init', '<?php echo $id ?>');
+fbq('track', 'ViewContent', {
+content_name: '<?php echo $product->getName(); ?>',
+<?php if($category){?>content_category: '<?php echo $category->getName();?>',<?php }?>
+content_ids: ['<?php echo $sku; ?>'],
+content_type: 'product',
+value: <?php echo $product->getFinalPrice();?>,
+currency: '<?php echo $currency_code; ?>'
+});
+</script>
+<!-- End Custom Audience Pixel Code -->
+<?php } ?>
+

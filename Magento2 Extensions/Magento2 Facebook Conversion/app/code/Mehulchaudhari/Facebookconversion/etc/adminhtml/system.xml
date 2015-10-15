@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+         <tab id="mehulchaudhari" translate="label" sortOrder="9999991">
+            <label>Mehul Chaudhari</label>
+         </tab>
+         <section id="facebookconversion" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Facebookconversion</label>
+            <tab>mehulchaudhari</tab>
+            <resource>Mehulchaudhari_Facebookconversion::config_facebookconversion</resource>
+            <group id="general" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Setting</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable Disable Extension</comment>
+                </field>
+                <field id="pixelid" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pixel Id</label>
+                    <comment>Your Facebook Pixel Id</comment>
+                </field>
+                <field id="custom" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Audience Pixel</label>
+		    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable Disable Custom Audience Pixel</comment>
+                </field>
+            </group>
+       </section>
+    </system>
+</config>
