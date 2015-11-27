@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mehulchaudhari_Currency>
+            <version>1.0.0</version>
+        </Mehulchaudhari_Currency>
+    </modules>
+    <global>
+        <currency>
+            <import>
+                <services>
+                    <yahoofinance>
+                        <name>Yahoo Finance</name>
+                        <model>Mehulchaudhari_Currency_Model_Yahoo</model>
+                    </yahoofinance>
+                    <openapi>
+                        <name>Open Api</name>
+                        <model>Mehulchaudhari_Currency_Model_Openapi</model>
+                    </openapi>
+                    <google>
+                        <name>Google Currency Converter</name>
+                        <model>Mehulchaudhari_Currency_Model_Google</model>
+                    </google>
+                </services>
+            </import>
+        </currency>
+        <models>
+            <mehulchaudhari_currency>
+                <class>Mehulchaudhari_Currency_Model</class>
+            </mehulchaudhari_currency>
+        </models>
+    </global>
+</config>
