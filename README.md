@@ -30,6 +30,8 @@ so when you install this extension it will provide a functionality to add one mo
 
 13>Pdf upload in magento media wysiwyg is a magento extension and this extension will provide a admin utility to upload a pdf file in wysiwyg editor.
 
+14>Magento Yahoo Finance,Open Api,Google api for currency Rates this extension will provide a some extra currecy rate webservice to magento.
+
 More comming soon.....
 
 
