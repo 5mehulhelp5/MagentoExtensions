@@ -189,6 +189,7 @@ class Mehulchaudhari_FeedsGenerator_Model_Googleproducts_Cron extends Mehulchaud
                         break;
 
                     case 'g:link':
+                        $safeString = $value;
                         // Links must be written as an attribute
                         //$this->doc->startElement($feedTag);
                         //$this->doc->writeAttribute('href', $value);
