@@ -21,6 +21,10 @@
                         <name>Google Currency Converter</name>
                         <model>Mehulchaudhari_Currency_Model_Google</model>
                     </google>
+                    <api>
+                        <name>Currency API Currency Converter</name>
+                        <model>Mehulchaudhari_Currency_Model_Api</model>
+                    </api>
                 </services>
             </import>
         </currency>

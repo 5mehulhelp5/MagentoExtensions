@@ -20,6 +20,12 @@
                     <item name="class" xsi:type="string">Mehulchaudhari\Currency\Model\Google</item>
                 </item>
             </argument>
+            <argument name="servicesConfig" xsi:type="array">
+                <item name="api" xsi:type="array">
+                    <item name="label" xsi:type="string">Currency API Currency Converter</item>
+                    <item name="class" xsi:type="string">Mehulchaudhari\Currency\Model\Api</item>
+                </item>
+            </argument>
         </arguments>
     </type>
    <type name="Magento\Framework\Console\CommandList">
