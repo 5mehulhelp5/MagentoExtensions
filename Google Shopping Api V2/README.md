@@ -52,7 +52,7 @@ Magento Module Configuration
 <ul class="task-list">
 <li>
 <p>Basic Module configuration: Magento Admin -&gt; System -&gt; Configuration -&gt; 
-BlueVisionTec Modules -&gt; GoogleShoppingApi</p>
+WEBOFFICE MODULES -&gt; GoogleShoppingApi</p>
 
 <ul class="task-list">
 <li>Account-ID: Your GoogleShopping Merchant ID</li>
@@ -74,7 +74,7 @@ BlueVisionTec Modules -&gt; GoogleShoppingApi</p>
 Here you can set the GoogleShopping Category. 
 The language of the category is taken from the configured store language.
 The taxonomy files for de_DE and en_US are shipped with the module package.
-Further taxonomy files should be added to /var/bluevisiontec/googleshoppingapi/data .</li>
+Further taxonomy files should be added to /var/weboffice/googleshoppingapi/data .</li>
 </ul>
 </li>
 <li><p>Attributes configuration and item management can be found in Magento Admin -&gt;
