@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <daisyconfeed>
+            <limit>
+                <max_lines>50000</max_lines>
+                <max_file_size>10485760</max_file_size>
+            </limit>
+            <product>
+                <image_include>none</image_include>
+            </product>
+            <generate>
+                <enabled>0</enabled>
+                <error_email />
+                <error_email_template>daisyconfeed_generate_error_email_template</error_email_template>
+                <error_email_identity>general</error_email_identity>
+            </generate>
+            <file>
+                <valid_paths>
+                    <available>
+                        <any_path>/*/*.xml</any_path>
+                    </available>
+                </valid_paths>
+            </file>
+        </daisyconfeed>
+    </default>
+</config>
