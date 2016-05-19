@@ -48,6 +48,6 @@ abstract class WebDevlopers_ProductPageShipping_Block_Estimate_Abstract extends 
    
     public function isEnabled()
     {
-        return $this->getConfig()->isEnabled() && !$this->getProduct()->isVirtual();
+        return $this->getConfig()->isEnabled() && $this->getProduct() && !$this->getProduct()->isVirtual();
     }
 }
