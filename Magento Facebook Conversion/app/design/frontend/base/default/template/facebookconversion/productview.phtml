@@ -18,7 +18,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','//connect.facebook.net/en_US/fbevents.js');
 // Insert Your Custom Audience Pixel ID below. 
 fbq('init', '<?php echo $id ?>');
-
+fbq('track', 'PageView');
 fbq('track', 'ViewContent', {
 content_name: '<?php echo $product->getName(); ?>',
 <?php if($category){?>content_category: '<?php echo $category->getName();?>',<?php }?>
