@@ -5,22 +5,78 @@
       <version>0.1.0</version>
     </Pdf_Allow>
   </modules>
- <adminhtml>
+  <adminhtml>
         <cms>
             <browser>
                 <extensions>
                     <allowed>
+                        <jpg>1</jpg>
+                        <jpeg>1</jpeg>
+                        <png>1</png>
+                        <gif>1</gif>
+                        <flv>1</flv>
+                        <zip>1</zip>
                         <pdf>1</pdf>
+                        <mp3>1</mp3>
+                        <mp4>1</mp4>
+                        <doc>1</doc>
+                        <gz>1</gz>
+                        <xml>1</xml>
+                        <xls>1</xls>
+                        <xlsx>1</xlsx>
+                        <csv>1</csv>
+                        <odf>1</odf>
                     </allowed>
+                    <image_allowed>
+                        <jpg>1</jpg>
+                        <jpeg>1</jpeg>
+                        <png>1</png>
+                        <gif>1</gif>
+                    </image_allowed>
+                    <media_allowed>
+                        <flv>1</flv>
+                        <swf>1</swf>
+                        <avi>1</avi>
+                        <mov>1</mov>
+                        <rm>1</rm>
+                        <wmv>1</wmv>
+                    </media_allowed>
                 </extensions>
             </browser>
         </cms>
     </adminhtml>
   <global>
-    <helpers>
-      <allow>
-        <class>Pdf_Allow_Helper</class>
-      </allow>
-    </helpers>
+    <blocks>
+            <adminhtml>
+                <rewrite>
+                    <cms_wysiwyg_images_content_files>Pdf_Allow_Block_Thumb</cms_wysiwyg_images_content_files>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <cms>
+                <rewrite>
+                    <wysiwyg_images>Pdf_Allow_Helper_File</wysiwyg_images>
+                </rewrite>
+            </cms>
+        </helpers>
+		<models>
+		    <cms>
+			   <rewrite>
+                    <wysiwyg_images_storage>Pdf_Allow_Model_Storage</wysiwyg_images_storage>
+                </rewrite>
+			</cms>
+		</models>
   </global>
+  <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Pdf_Allow before="Mage_Adminhtml">Pdf_Allow</Pdf_Allow>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config> 
