@@ -38,7 +38,7 @@ More comming soon.....
 My Self
 =================
 
-I have a really Good experience in PHP development. i have been in this development field from last 3.5 years.
+I have a really Good experience in PHP development. i have been in this development field from last 5.5 years.
 
 Skills
 ----------
