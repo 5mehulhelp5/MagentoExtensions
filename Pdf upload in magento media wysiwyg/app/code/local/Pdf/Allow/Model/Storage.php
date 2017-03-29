@@ -51,12 +51,13 @@ class Pdf_Allow_Model_Storage extends Mage_Cms_Model_Wysiwyg_Images_Storage
         $uploader->setAllowRenameFiles(true);
         $uploader->setFilesDispersion(false);
         $result = $uploader->save($targetPath);
+	   
         if (!$result) {
             Mage::throwException( Mage::helper('cms')->__('Cannot upload file.') );
         }
 
         // create thumbnail
-		if($this->isImage($result['name'])){
+		if(pathinfo($result['name'], PATHINFO_EXTENSION) !== 'pdf'){
               $this->resizeFile($targetPath . DS . $uploader->getUploadedFileName(), true);
 		}
 

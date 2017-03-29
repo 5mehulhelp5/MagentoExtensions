@@ -9,38 +9,12 @@
         <cms>
             <browser>
                 <extensions>
-                    <allowed>
-                        <jpg>1</jpg>
-                        <jpeg>1</jpeg>
-                        <png>1</png>
-                        <gif>1</gif>
-                        <flv>1</flv>
-                        <zip>1</zip>
+                    <allowed> 
                         <pdf>1</pdf>
-                        <mp3>1</mp3>
-                        <mp4>1</mp4>
-                        <doc>1</doc>
-                        <gz>1</gz>
-                        <xml>1</xml>
-                        <xls>1</xls>
-                        <xlsx>1</xlsx>
-                        <csv>1</csv>
-                        <odf>1</odf>
                     </allowed>
-                    <image_allowed>
-                        <jpg>1</jpg>
-                        <jpeg>1</jpeg>
-                        <png>1</png>
-                        <gif>1</gif>
-                    </image_allowed>
-                    <media_allowed>
-                        <flv>1</flv>
-                        <swf>1</swf>
-                        <avi>1</avi>
-                        <mov>1</mov>
-                        <rm>1</rm>
-                        <wmv>1</wmv>
-                    </media_allowed>
+					<image_allowed>
+					    <pdf>1</pdf>
+					</image_allowed>
                 </extensions>
             </browser>
         </cms>
