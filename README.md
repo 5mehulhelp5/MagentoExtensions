@@ -1,7 +1,7 @@
 Magento 1 and 2 Extensions
 ==========================
 
-<b>If you want magento 2 extensions
+<b>If you want magento 2 extensions<br/>
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter),<br/>
 2>All type of file upload in Wysiwyg,<br/>
 3>Infinite Scroll, <br/>
