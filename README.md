@@ -1,5 +1,5 @@
-Magento 1 Extensions and Magento 2 Extensions
-===================================================
+Magento 1 and 2 Extensions
+==========================
 
 <b>If you want magento 2 extensions
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter),<br/>
