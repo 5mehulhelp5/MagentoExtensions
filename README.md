@@ -1,14 +1,21 @@
 MagentoExtensions
 =================
 
-<b>If you want magento 2 extensions 
+<b>If you want magento 2 extensions
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter), 
+
 2>All type of file upload in Wysiwyg, 
+
 3>Infinite Scroll, 
+
 4>Multiple FlatRate Shipping, 
+
 5>Open Api,Google api for currency Rates, 
+
 6>Product Attribute's Description, 
+
 7>Store and Currency switcher according to Ip address 
+
 Please Contact me and All those extensions are paid with installation and configuration are free support.</b>
 
 
