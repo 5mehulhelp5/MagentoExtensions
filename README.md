@@ -3,12 +3,13 @@ Magento 1 and 2 Extensions
 
 <b>If you want magento 2 extensions<br/>
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter),<br/>
-2>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
-3>Infinite Scroll, <br/>
-4>Multiple FlatRate Shipping, <br/>
-5>Open Api,Google api for currency Rates, <br/>
-6>Product Attribute's Description,<br/>
-7>Store and Currency switcher according to Ip address <br/>
+2>Attribute Pages with SEO and Custom URL key(you can do all kind of seo on those pages)<br/>
+3>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
+4>Infinite Scroll, <br/>
+5>Multiple FlatRate Shipping, <br/>
+6>Open Api,Google api for currency Rates, <br/>
+7>Product Attribute's Description,<br/>
+8>Store and Currency switcher according to Ip address <br/>
 Please Contact me and All those extensions are paid with installation and configuration are free support.</b>
 
 Magento Extension Directory
