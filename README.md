@@ -3,7 +3,7 @@ Magento 1 and 2 Extensions
 
 <b>If you want magento 2 extensions<br/>
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter),<br/>
-2>All type of file upload in Wysiwyg,<br/>
+2>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
 3>Infinite Scroll, <br/>
 4>Multiple FlatRate Shipping, <br/>
 5>Open Api,Google api for currency Rates, <br/>
