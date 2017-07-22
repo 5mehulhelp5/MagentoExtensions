@@ -2,8 +2,8 @@ Magento 1 and 2 Extensions
 ==========================
 
 <b>If you want magento 2 extensions<br/>
-1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter),<br/>
-2>Attribute Pages with SEO and Custom URL key(you can do all kind of seo on those pages)<br/>
+1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter, Ajax Filtering),<br/>
+2>Attribute Pages with SEO and Custom URL key(you can do all kind of seo on those pages with logos)<br/>
 3>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
 4>Infinite Scroll, <br/>
 5>Multiple FlatRate Shipping, <br/>
