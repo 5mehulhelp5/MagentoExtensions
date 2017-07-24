@@ -1,16 +1,17 @@
 Magento 1 and 2 Extensions
 ==========================
 
-<b>If you want magento 2 extensions<br/>
+<b>If You want magento 2 extensions<br/>
 1>Advance Layred Navigation(including SEO URL, Rating as filter, slider filter, Ajax Filtering),<br/>
 2>Attribute Pages with SEO and Custom URL key(you can do all kind of seo on those pages with logos)<br/>
 3>Improved Sorting (Enable users to view products by options as 'Best Sellers', 'Top Rated', 'Most Viewed' etc.)<br/>
-4>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
-5>Infinite Scroll, <br/>
-6>Multiple FlatRate Shipping, <br/>
-7>Open Api,Google api for currency Rates, <br/>
-8>Product Attribute's Description,<br/>
-9>Store and Currency switcher according to Ip address <br/>
+4>Custom Stock Status(Add statuses to products automatically or manually, Create multiple custom stock statuses, Upload special icons for stock statuses)<br/>
+5>All type of file upload in Wysiwyg(pdf, zip, doc etc file upload in wysiwyg),<br/>
+6>Infinite Scroll, <br/>
+7>Multiple FlatRate Shipping, <br/>
+8>Open Api,Google api for currency Rates, <br/>
+9>Product Attribute's Description,<br/>
+10>Store and Currency switcher according to Ip address <br/>
 Please Contact me and All those extensions are paid with installation and configuration are free support.</b>
 
 Magento Extension Directory
