@@ -7,7 +7,7 @@
 
     class SmushIt
     {
-        const SMUSH_URL = 'http://www.smushit.com/ysmush.it/ws.php?';
+        const SMUSH_URL = 'http://api.resmush.it/ws.php?';
 
         public $filename;
         public $url;
