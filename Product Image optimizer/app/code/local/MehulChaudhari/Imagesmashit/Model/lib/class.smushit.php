@@ -1,4 +1,4 @@
-<?PHP
+<?php
     // smushit-php - a PHP client for Yahoo!'s Smush.it web service
     //
     // June 24, 2010
