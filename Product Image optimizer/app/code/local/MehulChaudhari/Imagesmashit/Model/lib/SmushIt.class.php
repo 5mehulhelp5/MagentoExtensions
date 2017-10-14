@@ -34,7 +34,7 @@ class SmushIt
 	/**
 	 * The base URL of the Yahoo! Smush.it™ API
 	 */
-	const SERVICE_API_URL = "http://www.smushit.com/ysmush.it/ws.php";
+	const SERVICE_API_URL = "http://api.resmush.it/ws.php";
 
 	/**
 	 * Maximum filesize allowed by Yahoo! Smush.it™ API
