@@ -6,6 +6,7 @@ Configuration
 =================
 
 As the module has to use Google OAuth2 a ClientId and ClientSecret for Google Content API is required. This can be generated in the http://console.developers.google.com/
+
 You can choose between using a Client ID for web application or using a service account. If the Client ID for web application is used a manual user interaction is needed to provide access to Google Content API. In this case automated processes like cron jobs are not available.
 
 Using a service account is recommended and needed if you want to use automated processes.
