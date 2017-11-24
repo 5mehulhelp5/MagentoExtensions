@@ -6,9 +6,37 @@ Configuration
 =================
 
 As the module has to use Google OAuth2 a ClientId and ClientSecret for Google Content API is required. This can be generated in the http://console.developers.google.com/
+You can choose between using a Client ID for web application or using a service account. If the Client ID for web application is used a manual user interaction is needed to provide access to Google Content API. In this case automated processes like cron jobs are not available.
 
-Create a project in Google developers console
-------------------------------------------------
+Using a service account is recommended and needed if you want to use automated processes.
+
+### Using Service account
+
+#### Create a project in Google developers console
+
+* Login to Google developers console or create an account
+* Create a Project
+  * Name: Magento-GoogleShoppingApi
+  * Project-ID: use the generated id or something like magento-gshopping-841
+* After the project is created go to "APIs & auth" -> "APIs"
+* Search for "Content API for Shopping" and enable it
+* Next go to "APIs & auth" -> "Credentials" and click "Create new Client ID"
+* Select "Service account"
+  * Select "P12 Key" as key type
+  * Click on "Create Client ID"
+  * Save the P12 file and write down the private key's password
+  
+#### Allow the service account to access your merchant center account
+  
+* Login to Google Merchant center
+* Go to Settings -> Users
+* Click on "+User"
+  * Enter the email address of your service account as "User email address" (*****@developer.gserviceaccount.com)
+  * Select "Standard access" as access level
+
+### Using Client ID for web application
+
+#### Create a project in Google developers console
 
 <ul class="task-list">
 <li>Login to Google developers console or create an account <a href="https://console.developers.google.com" target="_blank">https://console.developers.google.com</a></li>

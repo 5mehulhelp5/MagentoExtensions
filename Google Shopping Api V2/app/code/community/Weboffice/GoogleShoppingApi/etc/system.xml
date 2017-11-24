@@ -146,6 +146,16 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                 </custom_url_parameters>
+				<use_service_account translate="label">
+                    <label>Use service account</label>
+                    <frontend_type>select</frontend_type>
+                    <source_model>adminhtml/system_config_source_yesno</source_model>
+                    <comment>Renew items which are not listed on Google Shopping while performing synchronisation</comment>
+                    <sort_order>9</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </use_service_account>
                 <client_id translate="label">
                     <label>Google Developer Project Client ID</label>
                     <frontend_type>text</frontend_type>
@@ -162,6 +172,36 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                 </client_secret>
+				<client_email translate="label">
+                    <label>Google Developer Project E-Mail</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>21</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<depends><use_service_account>1</use_service_account></depends>
+                </client_email>
+				<private_key_file translate="label">
+                    <label>Google Developer Project Private Key file</label>
+                    <frontend_type>file</frontend_type>
+                    <backend_model>adminhtml/system_config_backend_file</backend_model>
+                    <upload_dir>var/weboffice/googleshoppingapi/oauth/</upload_dir>
+                    <sort_order>22</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <depends><use_service_account>1</use_service_account></depends>
+                </private_key_file>
+                <private_key_password translate="label">
+                    <label>Google Developer Project Private Key password</label>
+                    <frontend_type>text</frontend_type>
+                    <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                    <sort_order>23</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <depends><use_service_account>1</use_service_account></depends>
+                </private_key_password>
                 <autorenew_notlisted translate="label">
                     <label>Renew not listed items</label>
                     <frontend_type>select</frontend_type>

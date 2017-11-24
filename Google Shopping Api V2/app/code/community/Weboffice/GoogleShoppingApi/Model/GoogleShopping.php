@@ -18,6 +18,7 @@ class Weboffice_GoogleShoppingApi_Model_GoogleShopping extends Varien_Object
 {
 
 	const APPNAME = 'Weboffice Magento GoogleShopping';
+	const PRIVATE_KEY_UPLOAD_DIR = '/var/weboffice/googleshoppingapi/oauth/';
 
 	/** 
 	 * @var Google_Client
@@ -77,12 +78,15 @@ class Weboffice_GoogleShoppingApi_Model_GoogleShopping extends Varien_Object
      */
     public function getClient($storeId, $noAuthRedirect = false)
     {
-    
+		$useServiceAccount = $this->getConfig()->getUseServiceAccount($storeId);
+		
 		if(isset($this->_client)) {
 			if($this->_client->isAccessTokenExpired()) {
-				//header('Location: ' . Mage::getUrl("adminhtml/googleShoppingApi_oauth/auth",array('store_id'=>$storeId) ));
-				//exit;
-				return $this->redirectToAuth($storeId,$noAuthRedirect);
+				if($useServiceAccount) {
+                    $client->getAuth()->refreshTokenWithAssertion();
+                } else {
+                    return $this->redirectToAuth($storeId,$noAuthRedirect);
+                }
 			}
 			return $this->_client;
 		}
@@ -94,33 +98,48 @@ class Weboffice_GoogleShoppingApi_Model_GoogleShopping extends Varien_Object
 
  		$clientId = $this->getConfig()->getConfigData('client_id',$storeId);
 		$clientSecret = $this->getConfig()->getConfigData('client_secret',$storeId);
+		$clientEmail =  $this->getConfig()->getConfigData('client_email',$storeId);
+		$privateKeyFile = Mage::getBaseDir().self::PRIVATE_KEY_UPLOAD_DIR.$this->getConfig()->getConfigData('private_key_file',$storeId);
+		$privateKeyPassword = $this->getConfig()->getPrivateKeyPassword($storeId);
 		
-		if(!$clientId || !$clientSecret) {
+		$privateKey = file_get_contents($privateKeyFile);
+        $credentials = new Google_Auth_AssertionCredentials(
+            $clientEmail,
+            array('https://www.googleapis.com/auth/content'),
+            $privateKey,
+            $privateKeyPassword
+        );
+		
+		if(!$clientId || (!$clientSecret && !$useServiceAccount) ) {
 			Mage::getSingleton('adminhtml/session')->addError("Please specify Google Content API access data for this store!");
 			return false;
 			
  		}
- 		
-		if(!isset($accessToken) || empty($accessToken) ) {
-			//header('Location: ' . Mage::getUrl("adminhtml/googleShoppingApi_oauth/auth",array('store_id'=>$storeId) ));
-			//exit;
-			return $this->redirectToAuth($storeId,$noAuthRedirect);
+		
+		if(!$useServiceAccount) {
+            if(!isset($accessToken) || empty($accessToken) ) {
+                return $this->redirectToAuth($storeId,$noAuthRedirect);
+            }
 		}
-
-		
-		
     
 		$client = new Google_Client();
 		$client->setApplicationName(self::APPNAME);
 		$client->setClientId($clientId);
-		$client->setClientSecret($clientSecret);
+		//$client->setClientSecret($clientSecret);
 		$client->setScopes('https://www.googleapis.com/auth/content');
-		$client->setAccessToken($accessToken);
-
-		if($client->isAccessTokenExpired()) {
-			//header('Location: ' . Mage::getUrl("adminhtml/googleShoppingApi_oauth/auth",array('store_id'=>$storeId) ));
-			//exit;
-			return $this->redirectToAuth($storeId,$noAuthRedirect);
+		
+		if($useServiceAccount) {
+            $client->setClassConfig('Google_Cache_File',array('directory' => Mage::getBaseDir().'/var/cache/weboffice/googleshoppingapi/googleapi/'));
+            $client->setAssertionCredentials($credentials);
+             if ($client->getAuth()->isAccessTokenExpired()) {
+                $client->getAuth()->refreshTokenWithAssertion();
+            }
+		} else {
+            $client->setAccessToken($accessToken);
+            $client->setClientSecret($clientSecret);
+            if($client->isAccessTokenExpired()) {
+                return $this->redirectToAuth($storeId,$noAuthRedirect);
+            }
 		}
 		
 		$this->_client = $client;
