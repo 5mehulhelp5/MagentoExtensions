@@ -85,8 +85,12 @@ WEBOFFICE MODULES -&gt; GoogleShoppingApi</p>
 
 <ul class="task-list">
 <li>Account-ID: Your GoogleShopping Merchant ID</li>
+<li>Use service account: Use Client ID for web application or Service account (as mentioned above)</li>
 <li>Google Developer Project Client ID: The Client ID generated above</li>
-<li>Google Developer Project Client Secret: The Client Secret generated above</li>
+<li>Google Developer Project Client Secret: The Client Secret generated above (Client ID for web application only)</li>
+<li>Google Developer Project E-Mail: The E-Mail address from your credentials</li>
+<li>Google Developer Project Private Key file: upload the P12 file here (Service account only)</li>
+<li>Google Developer Project Private Key password: The private key's password (Service account only)</li>
 <li>Target Country: The country for which you want to upload your products</li>
 <li>Update Google Shopping Item when Product is Updated</li>
 <li>Renew not listed items</li>
