@@ -1,7 +1,7 @@
 Magento 1 and 2 Extensions
 ==========================
 
-![Magento 2.1](https://img.shields.io/badge/Magento-%3E=2.0-blue.svg)
+![Magento 2.0](https://img.shields.io/badge/Magento-%3E=2.0-blue.svg)
 ![PHP >= 5.6](https://img.shields.io/badge/PHP-%3E=5.6-green.svg)
 
 <b>If You want magento 2 extensions<br/>
