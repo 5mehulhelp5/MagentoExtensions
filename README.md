@@ -66,11 +66,7 @@ CMS:- Wordpress,Joomla
 
 Freelancing Job Profile:-
 <br/>
-1>Elance
-<br/>
-<a href="http://mehulchaudhari.elance.com" target="_blank">Fore More Detail</a>
-<br/>
-2>Upwork
+Upwork
 <br/>
 <a href="https://www.upwork.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
 <br/>
