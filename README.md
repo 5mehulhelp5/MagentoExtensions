@@ -71,6 +71,6 @@ Upwork
 <a href="https://www.upwork.com/o/profiles/users/_~0131aa29ad23bc45f1/" target="_blank">Fore More Detail</a>
 <br/>
 
-<b>My email address is : 5mehulhelp5@gmail.com Skype Id: mehul.chaudhari.</b>
+<b>My email address is : 5mehulhelp5@gmail.com <br/> Skype Id: mehul.chaudhari.</b>
 <br/>
 Thanks 
